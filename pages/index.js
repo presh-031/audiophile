@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero";
 import Head from "next/head";
 import Image from "next/image";
 // import { Inter } from "@next/font/google";
@@ -14,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
+        <Hero />
       </main>
     </>
   );
