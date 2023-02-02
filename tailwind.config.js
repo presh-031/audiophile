@@ -9,7 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "subheader-desktop": "url('/assets/home/desktop/image-hero.jpg')",
+        "subheader-tablet": "url('/assets/home/tablet/image-header.jpg')",
+        "subheader-mobile": "url('/assets/home/mobile/image-header.jpg')",
+      },
+    },
   },
   plugins: [],
 };
