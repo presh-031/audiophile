@@ -1,4 +1,6 @@
+import AllProducts from "@/components/AllProducts";
 import Hero from "@/components/Hero";
+import HomePageProducts from "@/components/HomePageProducts";
 import Head from "next/head";
 import Image from "next/image";
 // import { Inter } from "@next/font/google";
@@ -16,6 +18,8 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <AllProducts />
+        <HomePageProducts />
       </main>
     </>
   );
