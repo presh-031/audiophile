@@ -11,9 +11,11 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "subheader-desktop": "url('/assets/home/desktop/image-hero.jpg')",
-        "subheader-tablet": "url('/assets/home/tablet/image-header.jpg')",
-        "subheader-mobile": "url('/assets/home/mobile/image-header.jpg')",
+        "subheader-desktop": "url('../assets/home/desktop/image-hero.jpg')",
+        "subheader-tablet": "url('../assets/home/tablet/image-header.jpg')",
+        "subheader-mobile": "url('../assets/home/mobile/image-header.jpg')",
+
+        "pattern-circles": "url('../assets/home/desktop/pattern-circles.svg')",
       },
     },
   },
