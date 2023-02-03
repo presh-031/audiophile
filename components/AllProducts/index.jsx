@@ -7,7 +7,7 @@ import earPhones from "../../assets/shared/desktop/image-category-thumbnail-earp
 
 const AllProducts = () => {
   return (
-    <div>
+    <div className="px-[2.4rem]">
       <Product categoryImg={headPhones} categoryTitle="HEADPHONES" />
       <Product categoryImg={speakers} categoryTitle="SPEAKERS" />
       <Product categoryImg={earPhones} categoryTitle="EARPHONES" />
