@@ -3,7 +3,7 @@ import React from "react";
 const MenuItems = () => {
   return (
     <nav>
-      <ul className="hidden">
+      <ul className="">
         <li>HOME</li>
         <li>HEADPHONES</li>
         <li>SPEAKERS</li>

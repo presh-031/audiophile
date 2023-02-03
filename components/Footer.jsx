@@ -3,10 +3,14 @@ import React from "react";
 
 import logo from "../assets/shared/desktop/logo.svg";
 import MenuItems from "./Hero/Header/MenuItems";
+
+import facebook from "../assets/shared/desktop/icon-facebook.svg";
+import twitter from "../assets/shared/desktop/icon-twitter.svg";
+import instagram from "../assets/shared/desktop/icon-instagram.svg";
 const Footer = () => {
   return (
-    <footer className="bg-black text-white">
-      <div>
+    <footer className="bg-black px-[2.4rem] pt-[5.2rem] text-center text-white">
+      <div className="text-[1.5rem] font-medium leading-[2.5rem]">
         <Image src={logo} alt="logo" />
         <p>
           Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound
@@ -17,6 +21,11 @@ const Footer = () => {
       </div>
       <div>
         <MenuItems />
+        <div>
+          <Image src={facebook} alt="facebook" />
+          <Image src={twitter} alt="twitter" />
+          <Image src={instagram} alt="instagram" />
+        </div>
       </div>
     </footer>
   );
