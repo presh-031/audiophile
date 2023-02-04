@@ -7,7 +7,7 @@ import circlesPattern from "../assets/home/desktop/pattern-circles.svg";
 
 const HomePageProducts = () => {
   return (
-    <div className="my-[12rem] flex flex-col gap-[2.4rem] px-[2.4rem]">
+    <div className="mt-[12rem] flex flex-col gap-[2.4rem] px-[2.4rem]">
       <div className="bg-[#d87d4a] bg-pattern-circles bg-contain bg-top bg-no-repeat px-[2.4rem]  py-[5.5rem]">
         <div>
           <Image className="mx-auto mb-[3.2rem]" width={172.25} height={207} src={zx9Speaker} alt="zx9-speaker" />
@@ -25,15 +25,15 @@ const HomePageProducts = () => {
         </div>
       </div>
 
-      <div className="h-[32.99rem]  bg-zx7-speaker-mobile bg-cover  bg-right py-[10.1rem] px-[2.1rem] outline outline-red-800">
+      <div className="h-[32.99rem]  bg-zx7-speaker-mobile bg-cover  bg-right py-[10.1rem] px-[2.1rem]">
         <p className="mb-[3.2rem] text-[2.80rem] font-bold leading-[3.8rem] tracking-[2px]">ZX7 SPEAKER</p>
         <ButtonTwo />
       </div>
 
-      <div>
-        <div className="h-[20rem] bg-yx1-earphones-mobile bg-contain outline"></div>
-        <div>
-          <p>YX1 EARPHONES</p>
+      <div className="flex flex-col gap-[2.4rem]">
+        <div className="h-[20rem] bg-yx1-earphones-mobile bg-contain "></div>
+        <div className="outline-800-red bg-[#f1f1f1] py-[4.1rem] px-[2.4rem] ">
+          <p className="mb-[3.2rem] text-[3.2rem] font-bold leading-[3.82rem] tracking-[2px]">YX1 EARPHONES</p>
           <ButtonTwo />
         </div>
       </div>

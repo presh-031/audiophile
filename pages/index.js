@@ -1,7 +1,7 @@
 import AllProducts from "@/components/AllProducts";
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
+
 import HomePageProducts from "@/components/HomePageProducts";
+import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero />
+        <SubHeader />
         <AllProducts />
         <HomePageProducts />
         {/* <Footer /> */}

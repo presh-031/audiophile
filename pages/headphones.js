@@ -1,9 +1,11 @@
-import Header from "@/components/Hero/Header";
-import ProductTitle from "@/components/ProductTitle";
+import Header from "@/components/Header";
+import ProductTitle from "@/components/ProductCategoryTitle";
 import React from "react";
 
 import Link from "next/link";
 import { products } from "../data";
+import BestAudioGear from "@/components/BestAudioGear";
+import AllProducts from "@/components/AllProducts";
 
 export const getStaticProps = () => {
   const headphones = [];
@@ -22,8 +24,9 @@ export const getStaticProps = () => {
 const headphones = ({ headphones }) => {
   return (
     <div>
-      <Header />
       {/* <ProductTitle title="HEADPHONES" /> */}
+      {/* <BestAudioGear /> */}
+      <AllProducts />
     </div>
   );
 };

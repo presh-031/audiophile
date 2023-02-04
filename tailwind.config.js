@@ -19,6 +19,8 @@ module.exports = {
 
         "zx7-speaker-mobile": "url('../assets/home/mobile/image-speaker-zx7.jpg')",
         "yx1-earphones-mobile": "url('../assets/home/mobile/image-earphones-yx1.jpg')",
+
+        "best-gear-mobile": "url('../assets/shared/mobile/image-best-gear.jpg')",
       },
     },
   },

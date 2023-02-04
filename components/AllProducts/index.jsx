@@ -1,16 +1,16 @@
 import React from "react";
-import Product from "./Product";
 
 import headPhones from "../../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import speakers from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 import earPhones from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
+import ProductCategory from "./ProductCategory";
 
 const AllProducts = () => {
   return (
     <div className="px-[2.4rem]">
-      <Product categoryImg={headPhones} categoryTitle="HEADPHONES" />
-      <Product categoryImg={speakers} categoryTitle="SPEAKERS" />
-      <Product categoryImg={earPhones} categoryTitle="EARPHONES" />
+      <ProductCategory categoryImg={headPhones} categoryTitle="HEADPHONES" />
+      <ProductCategory categoryImg={speakers} categoryTitle="SPEAKERS" />
+      <ProductCategory categoryImg={earPhones} categoryTitle="EARPHONES" />
     </div>
   );
 };

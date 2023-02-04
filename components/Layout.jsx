@@ -1,8 +1,10 @@
 import React from "react";
 
 import { Manrope } from "@next/font/google";
+import Header from "./Header";
+
+import About from "./About";
 import Footer from "./Footer";
-import Header from "./Hero/Header";
 
 const manrope = Manrope({ subsets: ["latin"] });
 const Layout = ({ children }) => {
@@ -10,6 +12,7 @@ const Layout = ({ children }) => {
     <div className={manrope.className}>
       <Header />
       {children}
+      <About />
       <Footer />
     </div>
   );
