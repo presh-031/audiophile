@@ -22,7 +22,7 @@ export default function Home() {
         <Hero />
         <AllProducts />
         <HomePageProducts />
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );

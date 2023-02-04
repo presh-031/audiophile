@@ -5,7 +5,6 @@ import SubHeader from "./SubHeader";
 const Hero = () => {
   return (
     <div className="bg-[#101010]">
-      <Header />
       <SubHeader />
     </div>
   );

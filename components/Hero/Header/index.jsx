@@ -9,7 +9,7 @@ import MenuItems from "./MenuItems";
 const Header = () => {
   return (
     <>
-      <header className="flex items-center py-[2.2rem] px-[2.4rem] justify-between">
+      <header className="flex items-center justify-between py-[2.2rem] px-[2.4rem]">
         <Image src={hamburgerMenu} alt="menu" />
         <Image src={logo} alt="logo" />
         <div className="hidden">
@@ -17,7 +17,7 @@ const Header = () => {
         </div>
         <Image src={cartIcon} alt="cart" />
       </header>
-      <div className="opacity-10 h-[1px] bg-white"></div>
+      <div className="h-[1px] bg-white opacity-10"></div>
     </>
   );
 };

@@ -7,31 +7,37 @@ import circlesPattern from "../assets/home/desktop/pattern-circles.svg";
 
 const HomePageProducts = () => {
   return (
-    <>
-      <div className="bg-pattern-circles bg-[#d87d4a]">
+    <div className="my-[12rem] flex flex-col gap-[2.4rem] px-[2.4rem]">
+      <div className="bg-[#d87d4a] bg-pattern-circles bg-contain bg-top bg-no-repeat px-[2.4rem]  py-[5.5rem]">
         <div>
-          <Image src={zx9Speaker} alt="zx9-speaker" />
+          <Image className="mx-auto mb-[3.2rem]" width={172.25} height={207} src={zx9Speaker} alt="zx9-speaker" />
         </div>
         <div>
-          <p>ZX9 SPEAKER</p>
-          <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-          <ButtonTwo />
+          <p className="text-center text-[3.6rem]  font-bold leading-[4rem] tracking-[1.29px] text-white ">
+            ZX9 SPEAKER
+          </p>
+          <p className="mt-[2.2rem] mb-[2.4rem] text-center text-[1.5rem] font-medium leading-[2.5rem] text-white ">
+            Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
+          </p>
+          <div className="flex justify-center">
+            <ButtonTwo />
+          </div>
         </div>
       </div>
 
-      <div>
-        <p>ZX7 SPEAKER</p>
+      <div className="h-[32.99rem]  bg-zx7-speaker-mobile bg-cover  bg-right py-[10.1rem] px-[2.1rem] outline outline-red-800">
+        <p className="mb-[3.2rem] text-[2.80rem] font-bold leading-[3.8rem] tracking-[2px]">ZX7 SPEAKER</p>
         <ButtonTwo />
       </div>
 
       <div>
-        <div></div>
+        <div className="h-[20rem] bg-yx1-earphones-mobile bg-contain outline"></div>
         <div>
           <p>YX1 EARPHONES</p>
           <ButtonTwo />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -16,6 +16,9 @@ module.exports = {
         "subheader-mobile": "url('../assets/home/mobile/image-header.jpg')",
 
         "pattern-circles": "url('../assets/home/desktop/pattern-circles.svg')",
+
+        "zx7-speaker-mobile": "url('../assets/home/mobile/image-speaker-zx7.jpg')",
+        "yx1-earphones-mobile": "url('../assets/home/mobile/image-earphones-yx1.jpg')",
       },
     },
   },
