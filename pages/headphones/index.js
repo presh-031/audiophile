@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import React from "react";
 
 import Link from "next/link";
-import { products } from "../data";
+import { products } from "../../data";
 import AllProducts from "@/components/AllProducts";
 import ProductCategoryTitle from "@/components/ProductCategoryTitle";
 import ProductItem from "@/components/ProductItem";
