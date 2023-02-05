@@ -1,8 +1,8 @@
 import React from "react";
 
-const ButtonOne = () => {
+const ButtonOne = ({ url }) => {
   return (
-    <button className="px-[3rem] text-white bg-[#D87D4A] py-[1.5rem] font-bold text-[1.3rem] leading-[1.776rem] tracking-[0.01em]">
+    <button className="bg-[#D87D4A] px-[3rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] text-white">
       SEE PRODUCT
     </button>
   );
