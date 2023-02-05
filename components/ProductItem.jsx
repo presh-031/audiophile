@@ -3,16 +3,19 @@ import React from "react";
 import ButtonOne from "./ButtonOne";
 
 const ProductItem = ({ item }) => {
-  console.log(item);
+  // console.log(item);
+  const image = item?.image.mobile;
   return (
-    <div className="outline outline-red-800">
-      <div>
-        <Image src={require("." + "./." + item?.image.mobile)} alt="product-image" height={352} width={327} />
-      </div>
-      <div>
-        {item.new && <p>new product</p>}
-        <p>{item.name}</p>
-        <p>{item.description}</p>
+    <div className="">
+      <div>{/* <Image src={require("." + "./." + image)} alt="product-image" height={352} width={327} /> */}</div>
+      <div className="text-center">
+        {item.new && (
+          <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[10px] text-[#d87d4a]">
+            new product
+          </p>
+        )}
+        <p className="mb-[2.4rem] text-[2.80rem] font-bold uppercase leading-[3.83rem] tracking-[1px]">{item.name}</p>
+        <p className=" mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem]">{item.description}</p>
         <ButtonOne />
       </div>
     </div>

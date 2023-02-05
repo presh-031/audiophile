@@ -1,10 +1,8 @@
 import Header from "@/components/Header";
-import ProductTitle from "@/components/ProductCategoryTitle";
 import React from "react";
 
 import Link from "next/link";
 import { products } from "../data";
-import BestAudioGear from "@/components/BestAudioGear";
 import AllProducts from "@/components/AllProducts";
 import ProductCategoryTitle from "@/components/ProductCategoryTitle";
 import ProductItem from "@/components/ProductItem";
@@ -27,7 +25,7 @@ const headphones = ({ headphones }) => {
   return (
     <div>
       <ProductCategoryTitle title="HEADPHONES" />
-      <div className="outline outline-red-800">
+      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem]">
         {headphones
           // methods to reverse array, and map through in that reverse order.
           .slice(0)

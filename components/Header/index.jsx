@@ -5,13 +5,16 @@ import logo from "../../assets/shared/desktop/logo.svg";
 import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
 import MenuItems from "./MenuItems";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <div className="bg-[#101010]">
       <header className="flex items-center justify-between py-[2.2rem] px-[2.4rem]">
         <Image src={hamburgerMenu} alt="menu" />
-        <Image src={logo} alt="logo" />
+        <Link href={"/"}>
+          <Image src={logo} alt="logo" />
+        </Link>
         <div className="hidden">
           <MenuItems />
         </div>

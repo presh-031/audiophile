@@ -3,8 +3,8 @@ import React from "react";
 const About = () => {
   return (
     <div className="mt-[12rem] px-[2.4rem]">
-      <div className="h-[30.0rem] bg-best-gear-mobile bg-contain outline"></div>
-      <div className="text-center outline">
+      <div className="h-[30.0rem] bg-best-gear-mobile bg-contain "></div>
+      <div className="text-center ">
         <p className="mb-[3.2rem] mt-[4.00rem] text-[2.80rem] font-bold uppercase leading-[3.82rem] tracking-[1px]">
           Bringing you the best audio gear
         </p>
