@@ -39,4 +39,4 @@ const speakers = ({ speakers }) => {
   );
 };
 
-// export default speakers;
+export default speakers;

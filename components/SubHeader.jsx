@@ -13,7 +13,7 @@ const SubHeader = () => {
         <p className="mb-[2.8rem] text-[1.5rem]  font-medium leading-[2.5rem] ">
           Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
         </p>
-        <ButtonOne url={}/>
+        <ButtonOne />
       </div>
     </div>
   );
