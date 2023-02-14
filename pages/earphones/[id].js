@@ -60,22 +60,33 @@ const ProductDetail = ({ earphone }) => {
             <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[1.29px]">
               ${earphone[0].price}
             </p>
-            <ItemCount />
+            <ItemCount item={earphone} />
           </div>
         </div>
 
         <div>
           <div>
-            <p className="mb-[2.4rem] text-[2.4rem] font-medium leading-[3.6rem] tracking-[0.86px]">FEATURES</p>
-            <p className="text-[1.5rem] font-medium leading-[2.5rem] opacity-50">{earphone[0].features}</p>
+            <p className="mb-[2.4rem] text-[2.4rem] font-medium leading-[3.6rem] tracking-[0.86px]">
+              FEATURES
+            </p>
+            <p className="text-[1.5rem] font-medium leading-[2.5rem] opacity-50">
+              {earphone[0].features}
+            </p>
           </div>
           <div className="mt-[8.8rem]">
-            <p className="mb-[2.4rem] text-[2.4rem] font-bold leading-[3.6rem] tracking-[0.88px]">IN THE BOX</p>
+            <p className="mb-[2.4rem] text-[2.4rem] font-bold leading-[3.6rem] tracking-[0.88px]">
+              IN THE BOX
+            </p>
             <ul>
               {earphone[0].includes.map((item) => {
                 return (
-                  <li key={item.item} className=" mb-[0.80rem] text-[1.5rem] leading-[2.5rem] opacity-50">
-                    <span className="mr-[2.4rem] font-bold text-[#d87d4a] ">{item.quantity}x</span>
+                  <li
+                    key={item.item}
+                    className=" mb-[0.80rem] text-[1.5rem] leading-[2.5rem] opacity-50"
+                  >
+                    <span className="mr-[2.4rem] font-bold text-[#d87d4a] ">
+                      {item.quantity}x
+                    </span>
                     <span>{item.item}</span>
                   </li>
                 );
