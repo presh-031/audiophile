@@ -4,6 +4,9 @@ import Image from "next/image";
 import { products } from "../../data";
 
 import { useRouter } from "next/router";
+
+// import { useSelector } from "react-redux";
+
 export const getStaticPaths = () => {
   const paths = products
     .filter((product) => {
@@ -34,6 +37,10 @@ export const getStaticProps = (context) => {
 const ProductDetail = ({ earphone }) => {
   // console.log(earphone);
   const router = useRouter();
+
+  // const cart = useSelector((state) => state.cart);
+
+  // console.log(cart);
   return (
     <>
       <div className="px-[2.4rem] pt-[1.90rem]">
@@ -60,7 +67,10 @@ const ProductDetail = ({ earphone }) => {
             <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[1.29px]">
               ${earphone[0].price}
             </p>
-            <ItemCount item={earphone} />
+            <ItemCount
+              item={earphone[0]}
+              // quantity={}
+            />
           </div>
         </div>
 
