@@ -9,7 +9,7 @@ import Link from "next/link";
 
 // To show the number of items on cart btn
 import { useSelector } from "react-redux";
-import Cart from "./Cart";
+import Cart from "./Cart/index";
 
 const Header = () => {
   const cart = useSelector((state) => state.cart);

@@ -2,15 +2,16 @@ import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
+
 import {
   incrementQuantity,
   decrementQuantity,
   removeItem,
 } from "../features/cart/cartSlice";
 
-const ItemCount = ({ item, quantity = 0 }) => {
+const ItemCount = ({ item }) => {
   const dispatch = useDispatch();
-  // console.log(item);
+  console.log(item);
 
   // Create local counter here, then add to cart should add value top cart
   const [value, setValue] = useState(0);

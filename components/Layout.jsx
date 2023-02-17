@@ -9,8 +9,8 @@ import Footer from "./Footer";
 // const manrope = Manrope({ subsets: ["latin"] });
 
 // Logic for cart
-import { store } from "../store/store";
 import { Provider } from "react-redux";
+import { store } from "../store/store";
 
 const Layout = ({ children }) => {
   return (
