@@ -44,11 +44,17 @@ const Cart = () => {
           quantity={item.quantity}
         />
       ))}
-      <div>
-        <p>TOTAL</p>
-        <p>${getTotal().totalPrice}</p>
+      <div className="mt-[3.2rem] mb-[2.4rem] flex justify-between ">
+        <p className="text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50">
+          TOTAL
+        </p>
+        <p className="text-[1.80rem] font-bold leading-[2.4rem]">
+          ${getTotal().totalPrice}
+        </p>
       </div>
-      <button>CHECKOUT</button>
+      <button className="w-full bg-[#D87D4A] bg-[] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline">
+        CHECKOUT
+      </button>
     </div>
   );
 };
