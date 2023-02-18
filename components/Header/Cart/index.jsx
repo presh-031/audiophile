@@ -3,16 +3,34 @@ import React from "react";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 
+import { emptyCart } from "@/features/cart/cartSlice";
+import { useDispatch } from "react-redux";
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  // console.log(cart);
+
+  const dispatch = useDispatch();
+
+  // Logic to get total items and price in cart
+  const getTotal = () => {
+    let totalQuantity = 0;
+    let totalPrice = 0;
+    cart.forEach((item) => {
+      totalQuantity += item.quantity;
+      totalPrice += item.price * item.quantity;
+    });
+    return { totalPrice, totalQuantity };
+  };
+
   return (
     <div className="absolute right-[25px] top-[90px] left-[25px] bg-white px-[2.8rem] py-[3.2rem] outline outline-red-800">
       <div className="mb-[3.1rem] flex justify-between">
         <p className="text-[1.8rem] font-bold leading-[2.4590rem] tracking-[.129rem]">
-          CART <span>({})</span>
+          CART <span>({getTotal().totalQuantity})</span>
         </p>
-        <p className="text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50 hover:underline">
+        <p
+          onClick={() => dispatch(emptyCart())}
+          className="text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50 hover:underline"
+        >
           Remove all
         </p>
       </div>
@@ -26,6 +44,11 @@ const Cart = () => {
           quantity={item.quantity}
         />
       ))}
+      <div>
+        <p>TOTAL</p>
+        <p>${getTotal().totalPrice}</p>
+      </div>
+      <button>CHECKOUT</button>
     </div>
   );
 };
