@@ -35,7 +35,6 @@ const CartItem = ({ id, image, name, price, quantity }) => {
         <p className="px-[0.5rem]">{quantity}</p>
         <button
           onClick={() => dispatch(incrementQuantity(id))}
-          //   onClick={handleClick}
           className="px-[1.5rem] py-[1rem] outline"
         >
           +
