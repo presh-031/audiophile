@@ -5,11 +5,17 @@ import {
   decrementQuantity,
   removeItem,
 } from "../../../features/cart/cartSlice";
+
 import { useDispatch } from "react-redux";
 
 const CartItem = ({ id, image, name, price, quantity }) => {
   console.log(id, image, name, price, quantity);
   const dispatch = useDispatch();
+
+  const handleClick = () => {
+    console.log("clicked");
+  };
+
   return (
     <div className="flex items-center gap-[1.6rem]">
       <div>
@@ -29,6 +35,7 @@ const CartItem = ({ id, image, name, price, quantity }) => {
         <p className="px-[0.5rem]">{quantity}</p>
         <button
           onClick={() => dispatch(incrementQuantity(id))}
+          //   onClick={handleClick}
           className="px-[1.5rem] py-[1rem] outline"
         >
           +
