@@ -9,23 +9,13 @@ import {
 import { useDispatch } from "react-redux";
 
 const CartItem = ({ id, image, name, price, quantity }) => {
-  console.log(id, image, name, price, quantity);
+  //   console.log(id, image, name, price, quantity);
   const dispatch = useDispatch();
-
-  const handleClick = () => {
-    console.log("clicked");
-  };
 
   return (
     <div className="flex items-center gap-[1.6rem] ">
       <div>
-        <Image
-          onClick={handleClick}
-          className=""
-          alt=""
-          width={64}
-          height={64}
-        />
+        <Image className="" alt="" width={64} height={64} />
       </div>
       <div className=" flex flex-col font-bold  leading-[2.5rem]">
         <p className="w-[7rem] truncate text-[1.5rem] ">{name}</p>

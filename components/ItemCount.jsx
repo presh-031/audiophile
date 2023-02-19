@@ -13,28 +13,29 @@ import { useSelector } from "react-redux";
 
 const ItemCount = ({ item }) => {
   const dispatch = useDispatch();
-  // console.log(item);
 
   // To get quantity in cart
   const cart = useSelector((state) => state.cart);
 
-  console.log(cart);
+  // To get specific cart item in ui
+  const cartItem = cart.find((cartItem) => cartItem.id === item.id);
 
   const handleDecrementBtnClick = () => {
-    () => dispatch(decrementQuantity(item.id));
+    dispatch(decrementQuantity(item.id));
   };
 
   const handleIncrementBtnClick = () => {
     // since quantity is initially 0, clicking + should add 1 to cart just like the 'add to cart btn'.
     // Once quantity is more than 0, then it should increment normally.
+    // item should be a cartItem, not directly, so we get access to quantity.
 
-    // same logic, but item should be a cartitem, not directly, so we get access to quantity.
-    if (item.quantity === 0) {
-      dispatch(addToCart(item));
+    if (cartItem) {
+      dispatch(incrementQuantity(item.id));
     } else {
-      () => dispatch(incrementQuantity(item.id));
+      dispatch(addToCart(item));
     }
   };
+
   return (
     <div className="flex gap-[1.6rem] ">
       <div className="flex items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[1px] ">
@@ -44,15 +45,8 @@ const ItemCount = ({ item }) => {
         >
           -
         </button>
-
         <p className="px-[0.5rem] outline">
-          {cart.length
-            ? cart?.map((cartItem) => {
-                if (cartItem.id === item.id) {
-                  return cartItem.quantity;
-                }
-              })
-            : 0}
+          {cartItem ? cartItem.quantity : 0}
         </p>
         <button
           onClick={handleIncrementBtnClick}

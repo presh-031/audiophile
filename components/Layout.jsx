@@ -1,11 +1,11 @@
 import React from "react";
 
-// import { Manrope } from "@next/font/google";
-
 import Header from "./Header";
 import About from "./About";
 import Footer from "./Footer";
 
+// Font optimization.
+// import { Manrope } from "@next/font/google";
 // const manrope = Manrope({ subsets: ["latin"] });
 
 // Logic for cart
