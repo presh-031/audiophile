@@ -19,6 +19,11 @@ const ItemCount = ({ item /*only id is needed really ? */ }) => {
   const cart = useSelector((state) => state.cart);
 
   console.log(cart);
+
+  const handleIncrementBtnClick = () => {
+    // since quantity is initially 0, clicking + should add 1 to cart just like the 'add to cart btn'.
+    // Once quantity is more than 0, then it should increment normally.
+  };
   return (
     <div className="flex gap-[1.6rem] ">
       <div className="flex items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[1px] ">
@@ -39,9 +44,7 @@ const ItemCount = ({ item /*only id is needed really ? */ }) => {
             : 0}
         </p>
         <button
-          // since quantity is initially 0, clicking + should add 1 to cart just like the 'add to cart btn'.
-          // Once quantity is more than 0, then it should increment normally.
-          onClick={() => dispatch(incrementQuantity(item.id))}
+          onClick={handleIncrementBtnClick}
           className="px-[1.5rem] py-[1rem]"
         >
           +
