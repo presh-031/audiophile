@@ -109,6 +109,10 @@ const ProductDetail = ({ earphone }) => {
           </div>
           <div>{/* img */}</div>
         </div>
+
+        <div>
+          <p>YOU MAY ALSO LIKE</p>
+        </div>
       </div>
       <AllProducts />
     </>
