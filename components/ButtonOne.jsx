@@ -1,15 +1,14 @@
+import Link from "next/link";
 import React from "react";
 
 const ButtonOne = ({ url }) => {
   return (
-    <button
-      onClick={() => {
-        // navigate(url);
-      }}
+    <Link
+      href={url}
       className="bg-[#D87D4A] px-[3rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] text-white"
     >
       SEE PRODUCT
-    </button>
+    </Link>
   );
 };
 

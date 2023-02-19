@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useDispatch } from "react-redux";
 import { addToCart } from "../features/cart/cartSlice";
@@ -45,9 +45,7 @@ const ItemCount = ({ item }) => {
         >
           -
         </button>
-        <p className="px-[0.5rem] outline">
-          {cartItem ? cartItem.quantity : 0}
-        </p>
+        <p className="px-[0.5rem]">{cartItem ? cartItem.quantity : 0}</p>
         <button
           onClick={handleIncrementBtnClick}
           className="px-[1.5rem] py-[1rem]"

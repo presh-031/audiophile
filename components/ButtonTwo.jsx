@@ -1,10 +1,14 @@
+import Link from "next/link";
 import React from "react";
 
-const ButtonTwo = () => {
+const ButtonTwo = ({ url }) => {
   return (
-    <button className="outline font-bold text-[1.3rem] leading-[1.776rem] tracking-[0.01em] outline-black outline-[1px] px-[3rem] py-[1.5rem]">
+    <Link
+      href={url}
+      className="px-[3rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] outline outline-[1px] outline-black"
+    >
       SEE PRODUCT
-    </button>
+    </Link>
   );
 };
 

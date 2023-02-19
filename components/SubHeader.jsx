@@ -16,7 +16,7 @@ const SubHeader = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <ButtonOne url={"/headphones/xx99-mark-one-headphones"} />
+        <ButtonOne url={"/headphones/xx99-mark-two-headphones"} />
       </div>
     </div>
   );
