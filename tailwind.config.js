@@ -17,10 +17,14 @@ module.exports = {
 
         "pattern-circles": "url('../assets/home/desktop/pattern-circles.svg')",
 
-        "zx7-speaker-mobile": "url('../assets/home/mobile/image-speaker-zx7.jpg')",
-        "yx1-earphones-mobile": "url('../assets/home/mobile/image-earphones-yx1.jpg')",
+        "best-gear-mobile":
+          "url('../assets/shared/mobile/image-best-gear.jpg')",
 
-        "best-gear-mobile": "url('../assets/shared/mobile/image-best-gear.jpg')",
+        // testing bg-image for product images
+        "zx7-speaker-mobile":
+          "url('../assets/home/mobile/image-speaker-zx7.jpg')",
+        "yx1-earphones-mobile":
+          "url('../assets/home/mobile/image-earphones-yx1.jpg')",
       },
     },
   },

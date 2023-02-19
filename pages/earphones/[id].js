@@ -4,6 +4,7 @@ import Image from "next/image";
 import { products } from "../../data";
 
 import { useRouter } from "next/router";
+import Comparable from "@/components/Comparable";
 
 // import { useSelector } from "react-redux";
 
@@ -110,9 +111,7 @@ const ProductDetail = ({ earphone }) => {
           <div>{/* img */}</div>
         </div>
 
-        <div>
-          <p>YOU MAY ALSO LIKE</p>
-        </div>
+        <Comparable />
       </div>
       <AllProducts />
     </>

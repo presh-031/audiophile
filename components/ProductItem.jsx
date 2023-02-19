@@ -5,6 +5,8 @@ import ButtonOne from "./ButtonOne";
 const ProductItem = ({ item }) => {
   console.log(item);
   const image = item?.image.mobile;
+
+  console.log(image);
   return (
     <div className="">
       <div>
