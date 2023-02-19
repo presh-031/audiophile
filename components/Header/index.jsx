@@ -45,7 +45,7 @@ const Header = () => {
             {getTotalQuantity() || 0}
           </p>
         </div>
-        {isOpen && <Cart />}
+        {isOpen && <Cart setIsOpen={setIsOpen} />}
       </header>
       <div className="h-[1px] bg-white opacity-10"></div>
     </div>

@@ -17,28 +17,36 @@ const CartItem = ({ id, image, name, price, quantity }) => {
   };
 
   return (
-    <div className="flex items-center gap-[1.6rem]">
+    <div className="flex items-center gap-[1.6rem] ">
       <div>
-        <Image className="outline" alt="" width={64} height={64} />
+        <Image
+          onClick={handleClick}
+          className=""
+          alt=""
+          width={64}
+          height={64}
+        />
       </div>
-      <div className="flex flex-col  border-red-800 font-bold leading-[2.5rem]">
-        <p className="w-[8rem] truncate text-[1.5rem] ">{name}</p>
+      <div className=" flex flex-col font-bold  leading-[2.5rem]">
+        <p className="w-[7rem] truncate text-[1.5rem] ">{name}</p>
         <p className="text-[1.4rem] font-medium opacity-50  ">${price}</p>
       </div>
       <div className="flex h-[3.2rem] items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[1px] ">
-        <button
-          onClick={() => dispatch(decrementQuantity(id))}
-          className="px-[1.5rem] py-[1rem] outline"
+        <div
+          //   onClick={() => dispatch(decrementQuantity(id))}
+          onClick={handleClick}
+          className="px-[1.5rem] py-[1rem] "
         >
           -
-        </button>
+        </div>
         <p className="px-[0.5rem]">{quantity}</p>
-        <button
-          onClick={() => dispatch(incrementQuantity(id))}
-          className="px-[1.5rem] py-[1rem] outline"
+        <div
+          //   onClick={() => dispatch(incrementQuantity(id))}
+          onClick={handleClick}
+          className="px-[1.5rem] py-[1rem] "
         >
           +
-        </button>
+        </div>
       </div>
     </div>
   );
