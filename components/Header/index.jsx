@@ -26,7 +26,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-[#101010]">
-      <header className="flex items-center justify-between py-[2.2rem] px-[2.4rem]">
+      <header className=" flex items-center justify-between  py-[2.2rem] px-[2.4rem]">
         <Image src={hamburgerMenu} alt="menu" />
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
@@ -38,16 +38,15 @@ const Header = () => {
           onClick={() => {
             setIsOpen((prevIsOpen) => !prevIsOpen);
           }}
-          className="relative "
+          className="relative"
         >
           <Image src={cartIcon} alt="cart" />
           <p className="absolute top-4 left-[-2px] flex h-6 w-6 items-center  justify-center rounded-full bg-white text-black">
             {getTotalQuantity() || 0}
           </p>
         </div>
-        {isOpen && <Cart setIsOpen={setIsOpen} />}
       </header>
-      <div className="h-[1px] bg-white opacity-10"></div>
+      <div>{isOpen && <Cart setIsOpen={setIsOpen} />}</div>
     </div>
   );
 };

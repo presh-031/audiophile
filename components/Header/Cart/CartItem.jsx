@@ -33,16 +33,14 @@ const CartItem = ({ id, image, name, price, quantity }) => {
       </div>
       <div className="flex h-[3.2rem] items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[1px] ">
         <div
-          //   onClick={() => dispatch(decrementQuantity(id))}
-          onClick={handleClick}
+          onClick={() => dispatch(decrementQuantity(id))}
           className="px-[1.5rem] py-[1rem] "
         >
           -
         </div>
         <p className="px-[0.5rem]">{quantity}</p>
         <div
-          //   onClick={() => dispatch(incrementQuantity(id))}
-          onClick={handleClick}
+          onClick={() => dispatch(incrementQuantity(id))}
           className="px-[1.5rem] py-[1rem] "
         >
           +

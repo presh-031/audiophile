@@ -14,12 +14,16 @@ const ProductCategory = ({ categoryImg, categoryTitle }) => {
         height={133}
         width={147}
       />
-      <p className="text-[1.5rem] font-bold leading-[2rem] tracking-[0.01rem]">{categoryTitle}</p>
+      <p className="text-[1.5rem] font-bold leading-[2rem] tracking-[0.01rem]">
+        {categoryTitle}
+      </p>
       <Link
         href={`/${categoryTitle.toLowerCase()}`}
         className="mt-[1.7rem] mb-[2.2rem] flex justify-center gap-[1.3rem] "
       >
-        <p className="text-[1.3rem] font-bold leading-[1.776rem] tracking-[1px]">SHOP</p>
+        <p className="text-[1.3rem] font-bold leading-[1.776rem] tracking-[1px]">
+          SHOP
+        </p>
         <Image src={arrowRight} alt="shop" />
       </Link>
     </div>

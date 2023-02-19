@@ -67,10 +67,7 @@ const ProductDetail = ({ earphone }) => {
             <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[1.29px]">
               ${earphone[0].price}
             </p>
-            <ItemCount
-              item={earphone[0]}
-              // quantity={}
-            />
+            <ItemCount item={earphone[0]} />
           </div>
         </div>
 
