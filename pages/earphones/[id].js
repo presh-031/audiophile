@@ -4,7 +4,7 @@ import Image from "next/image";
 import { products } from "../../data";
 
 import { useRouter } from "next/router";
-import Comparable from "@/components/Comparable";
+// import Comparable from "@/components/Comparables";
 
 // import { useSelector } from "react-redux";
 
@@ -36,9 +36,10 @@ export const getStaticProps = (context) => {
 };
 
 const ProductDetail = ({ earphone }) => {
-  // console.log(earphone);
   const router = useRouter();
 
+  console.log(earphone);
+  console.log(earphone[0].image.mobile);
   // const cart = useSelector((state) => state.cart);
 
   // console.log(cart);
@@ -52,7 +53,9 @@ const ProductDetail = ({ earphone }) => {
           Go Back
         </button>
         <div className="mb-[8.80rem]">
-          <div>{/* <Image src={} alt=''/> */}</div>
+          <div
+            className={`bg-[url(${earphone[0].image.mobile})] h-[32.7rem] w-[100%] bg-contain bg-center outline`}
+          ></div>
           <div>
             {earphone[0].new && (
               <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[10px] text-[#d87d4a]">
@@ -111,7 +114,8 @@ const ProductDetail = ({ earphone }) => {
           <div>{/* img */}</div>
         </div>
 
-        <Comparable />
+        {/* Gallery Images go here */}
+        {/* <Comparables /> */}
       </div>
       <AllProducts />
     </>

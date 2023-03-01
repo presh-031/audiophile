@@ -1,5 +1,3 @@
-import React from "react";
-
 import headPhones from "../../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import speakers from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 import earPhones from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";

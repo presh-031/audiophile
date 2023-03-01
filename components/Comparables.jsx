@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ButtonOne from "./ButtonOne";
 
-const Comparable = () => {
+const Comparables = () => {
   return (
     <div className="outline">
       <p className="text-center text-[2.4rem] font-bold leading-[3.6rem] tracking-[0.086rem]">
@@ -19,4 +19,4 @@ const Comparable = () => {
   );
 };
 
-export default Comparable;
+export default Comparables;
