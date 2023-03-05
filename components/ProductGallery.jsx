@@ -3,7 +3,7 @@ import Image from "next/image";
 const ProductGallery = ({ gallery }) => {
   //   console.log(gallery);
   return (
-    <div className="outline">
+    <div className="mt-[8.8rem] mb-[12rem]">
       <div>
         <Image
           src={gallery.first.mobile.slice(1)}

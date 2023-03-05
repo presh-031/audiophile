@@ -45,6 +45,8 @@ const ProductDetail = ({ speaker }) => {
         <AboutProduct image={image} product={product} />
         <ProductFeatures product={product} />
         <ProductGallery gallery={gallery} />
+
+        <Comparables comparables={product.others} />
       </div>
       <AllProducts />
     </>
