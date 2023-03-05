@@ -1,9 +1,8 @@
 import AllProducts from "@/components/AllProducts";
 import ItemCount from "@/components/ItemCount";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import { products } from "../../data";
 
-import { useRouter } from "next/router";
 export const getStaticPaths = () => {
   const paths = products
     .filter((product) => {
@@ -32,7 +31,7 @@ export const getStaticProps = (context) => {
 };
 
 const ProductDetail = ({ speaker }) => {
-  // console.log(speaker);
+  console.log(speaker);
   const router = useRouter();
   return (
     <>
@@ -44,7 +43,7 @@ const ProductDetail = ({ speaker }) => {
           Go Back
         </button>
         <div className="mb-[8.80rem]">
-          <div>{/* <Image src={} alt=''/> */}</div>
+          <div className={`h-[10rem] `}>{/* <Image src={} alt=''/> */}</div>
           <div>
             {speaker[0].new && (
               <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[10px] text-[#d87d4a]">

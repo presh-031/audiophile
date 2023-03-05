@@ -1,16 +1,20 @@
 import Image from "next/image";
-import React from "react";
 import ButtonOne from "./ButtonOne";
 
 const ProductItem = ({ item }) => {
   console.log(item);
   const image = item?.image.mobile;
 
-  console.log(image);
   return (
     <div className="">
       <div>
-        {/* <Image src={require("." + "./." + image)} alt="product-image" height={352} width={327} /> */}
+        <Image
+          // .slice(1) to remove the initial '.' the json returns
+          src={image.slice(1)}
+          alt="product-image"
+          height={352}
+          width={327}
+        />
       </div>
       <div className="text-center">
         {item.new && (

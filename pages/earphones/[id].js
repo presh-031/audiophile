@@ -1,9 +1,8 @@
 import AllProducts from "@/components/AllProducts";
 import ItemCount from "@/components/ItemCount";
-import Image from "next/image";
+import { useRouter } from "next/router";
 import { products } from "../../data";
 
-import { useRouter } from "next/router";
 // import Comparable from "@/components/Comparables";
 
 // import { useSelector } from "react-redux";
@@ -54,7 +53,7 @@ const ProductDetail = ({ earphone }) => {
         </button>
         <div className="mb-[8.80rem]">
           <div
-            className={`bg-[url(${earphone[0].image.mobile})] h-[32.7rem] w-[100%] bg-contain bg-center outline`}
+            className={` h-[32.7rem] w-[100%] bg-contain bg-center outline`}
           ></div>
           <div>
             {earphone[0].new && (
@@ -71,6 +70,7 @@ const ProductDetail = ({ earphone }) => {
             <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[1.29px]">
               ${earphone[0].price}
             </p>
+            ``
             <ItemCount item={earphone[0]} />
           </div>
         </div>
