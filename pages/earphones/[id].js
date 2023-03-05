@@ -1,7 +1,6 @@
 import AboutProduct from "@/components/AboutProduct";
 import AllProducts from "@/components/AllProducts";
 import BackBtn from "@/components/BackBtn";
-import Comparables from "@/components/Comparables";
 import ProductFeatures from "@/components/ProductFeatures";
 import ProductGallery from "@/components/ProductGallery";
 import { products } from "../../data";
@@ -40,7 +39,7 @@ const ProductDetail = ({ earphone }) => {
 
   const gallery = product.gallery;
 
-  // console.log(product);
+  console.log(product);
   return (
     <>
       <div className="px-[2.4rem] pt-[1.90rem]">
@@ -48,8 +47,7 @@ const ProductDetail = ({ earphone }) => {
         <AboutProduct image={image} product={product} />
         <ProductFeatures product={product} />
         <ProductGallery gallery={gallery} />
-
-        <Comparables comparables={product.others} />
+        {/* <Comparables comparables={product.others} /> */}
       </div>
       <AllProducts />
     </>
