@@ -1,6 +1,7 @@
 import AboutProduct from "@/components/AboutProduct";
 import AllProducts from "@/components/AllProducts";
 import BackBtn from "@/components/BackBtn";
+import Comparables from "@/components/Comparables";
 import ProductFeatures from "@/components/ProductFeatures";
 import ProductGallery from "@/components/ProductGallery";
 import { products } from "../../data";

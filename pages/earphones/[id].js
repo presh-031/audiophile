@@ -40,7 +40,7 @@ const ProductDetail = ({ earphone }) => {
 
   const gallery = product.gallery;
 
-  console.log(product);
+  // console.log(product);
   return (
     <>
       <div className="px-[2.4rem] pt-[1.90rem]">
