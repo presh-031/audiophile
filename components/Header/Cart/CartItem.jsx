@@ -1,21 +1,19 @@
-import Image from "next/image";
-
 import {
-  incrementQuantity,
   decrementQuantity,
-  removeItem,
+  incrementQuantity,
 } from "../../../features/cart/cartSlice";
 
+import Image from "next/image";
 import { useDispatch } from "react-redux";
 
 const CartItem = ({ id, image, name, price, quantity }) => {
-  //   console.log(id, image, name, price, quantity);
+  // console.log(id, image, name, price, quantity);
   const dispatch = useDispatch();
 
   return (
     <div className="flex items-center gap-[1.6rem] ">
       <div>
-        <Image className="" alt="" width={64} height={64} />
+        <Image src={image.mobile.slice(1)} alt="" width={64} height={64} />
       </div>
       <div className=" flex flex-col font-bold  leading-[2.5rem]">
         <p className="w-[7rem] truncate text-[1.5rem] ">{name}</p>
