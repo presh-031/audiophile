@@ -1,4 +1,5 @@
 import AllProducts from "@/components/AllProducts";
+import BackBtn from "@/components/BackBtn";
 import ItemCount from "@/components/ItemCount";
 import { useRouter } from "next/router";
 import { products } from "../../data";
@@ -40,12 +41,7 @@ const ProductDetail = ({ speaker }) => {
   return (
     <>
       <div className="px-[2.4rem] pt-[1.90rem]">
-        <button
-          onClick={() => router.back()}
-          className="mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] text-[#000000] opacity-50"
-        >
-          Go Back
-        </button>
+        <BackBtn />
         <div className="mb-[8.80rem]">
           <div className={`h-[10rem] `}>
             <Image
