@@ -45,13 +45,6 @@ const ProductDetail = ({ headphone }) => {
         <AboutProduct image={image} product={product} />
         <ProductFeatures product={product} />
         <ProductGallery gallery={gallery} />
-        <div>
-          <div>
-            <div>{/* <img src="" alt="" /> */}</div>
-            <div>{/* <img src="" alt="" /> */}</div>
-          </div>
-          <div>{/* img */}</div>
-        </div>
       </div>
       <AllProducts />
     </>
