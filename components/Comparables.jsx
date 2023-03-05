@@ -6,7 +6,7 @@ const Comparables = ({ comparables }) => {
         YOU MAY ALSO LIKE
       </p>
       {comparables.map((comparable) => (
-        <div>
+        <div key={comparable.slug}>
           <div className="mt-[4rem] mb-[3.2rem]  h-[12rem] outline  ">
             {/* <Image /> */}
           </div>
