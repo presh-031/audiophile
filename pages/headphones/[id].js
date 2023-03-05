@@ -1,9 +1,8 @@
 import AllProducts from "@/components/AllProducts";
 import ItemCount from "@/components/ItemCount";
 import Image from "next/image";
-import { products } from "../../data";
-
 import { useRouter } from "next/router";
+import { products } from "../../data";
 
 export const getStaticPaths = () => {
   const paths = products
@@ -35,6 +34,10 @@ export const getStaticProps = (context) => {
 const ProductDetail = ({ headphone }) => {
   // console.log(headphone);
   const router = useRouter();
+
+  const product = headphone[0];
+
+  const image = product.image.mobile;
   return (
     <>
       <div className="px-[2.4rem] pt-[1.90rem]">
@@ -45,23 +48,30 @@ const ProductDetail = ({ headphone }) => {
           Go Back
         </button>
         <div className="mb-[8.80rem]">
-          <div>{/* <Image src={} alt=''/> */}</div>
           <div>
-            {headphone[0].new && (
+            <Image
+              src={image.slice(1)}
+              alt="product-image"
+              height={327}
+              width={327}
+            />
+          </div>
+          <div>
+            {product.new && (
               <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[10px] text-[#d87d4a]">
                 new product
               </p>
             )}
             <p className="mb-[2.4rem] text-[2.80rem] font-bold uppercase leading-[3.83rem] tracking-[1px]">
-              {headphone[0].name}
+              {product.name}
             </p>
             <p className=" mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] opacity-50">
-              {headphone[0].description}
+              {product.description}
             </p>
             <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[1.29px]">
-              ${headphone[0].price}
+              ${product.price}
             </p>
-            <ItemCount item={headphone[0]} />
+            <ItemCount item={product} />
           </div>
         </div>
 
@@ -71,7 +81,7 @@ const ProductDetail = ({ headphone }) => {
               FEATURES
             </p>
             <p className="text-[1.5rem] font-medium leading-[2.5rem] opacity-50">
-              {headphone[0].features}
+              {product.features}
             </p>
           </div>
           <div className="mt-[8.8rem]">
@@ -79,7 +89,7 @@ const ProductDetail = ({ headphone }) => {
               IN THE BOX
             </p>
             <ul>
-              {headphone[0].includes.map((item) => {
+              {product.includes.map((item) => {
                 return (
                   <li
                     key={item.item}
