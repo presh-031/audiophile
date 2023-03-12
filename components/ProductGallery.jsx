@@ -7,7 +7,7 @@ const ProductGallery = ({ gallery }) => {
       <div>
         <Image
           src={gallery.first.mobile.slice(1)}
-          alt="product-gallery"
+          alt="product-image"
           width={327}
           height={174}
           className="mb-[2rem] rounded-xl"
@@ -15,7 +15,7 @@ const ProductGallery = ({ gallery }) => {
 
         <Image
           src={gallery.second.mobile.slice(1)}
-          alt="product-gallery"
+          alt="product-image"
           width={327}
           height={174}
           className="mb-[2rem] rounded-xl"
@@ -24,7 +24,7 @@ const ProductGallery = ({ gallery }) => {
 
       <Image
         src={gallery.third.mobile.slice(1)}
-        alt="product-gallery"
+        alt="product-image"
         width={327}
         height={368}
         className=" rounded-xl"

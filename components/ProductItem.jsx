@@ -11,7 +11,7 @@ const ProductItem = ({ item }) => {
         // .slice(1) to remove the initial '.' in the filepath string the json returns
         // so that the filepath referenced starts with a '/', as the assets are in the public folder.
         src={image.slice(1)}
-        alt="product-image"
+        alt="product"
         height={352}
         width={327}
         className="mb-[3.2rem]"

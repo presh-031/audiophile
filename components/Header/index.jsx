@@ -1,15 +1,14 @@
+import { useState } from "react";
+
 import Image from "next/image";
-import React, { useState } from "react";
-
-import logo from "../../assets/shared/desktop/logo.svg";
-import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
-import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
-import MenuItems from "./MenuItems";
 import Link from "next/link";
-
+import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
+import logo from "../../assets/shared/desktop/logo.svg";
+import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
+import Cart from "./Cart/index";
+import MenuItems from "./MenuItems";
 // To show the number of items on cart btn
 import { useSelector } from "react-redux";
-import Cart from "./Cart/index";
 
 const Header = () => {
   const cart = useSelector((state) => state.cart);

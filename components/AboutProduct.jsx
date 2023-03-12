@@ -4,12 +4,7 @@ import ItemCount from "./ItemCount";
 const AboutProduct = ({ product, image }) => {
   return (
     <div className="mb-[8.80rem]">
-      <Image
-        src={image.slice(1)}
-        alt="product-image"
-        height={327}
-        width={327}
-      />
+      <Image src={image.slice(1)} alt="product" height={327} width={327} />
       <div>
         {product.new && (
           <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[10px] text-[#d87d4a]">

@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
 import arrowRight from "../../assets/shared/desktop/icon-arrow-right.svg";
 
 const ProductCategory = ({ categoryImg, categoryTitle }) => {
@@ -10,7 +8,7 @@ const ProductCategory = ({ categoryImg, categoryTitle }) => {
       <Image
         className="relative top-[-5.2rem] mb-[-5.2rem]  "
         src={categoryImg}
-        alt="category-image"
+        alt="category"
         height={133}
         width={147}
       />

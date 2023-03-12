@@ -13,7 +13,7 @@ const CartItem = ({ id, image, name, price, quantity }) => {
   return (
     <div className="flex items-center gap-[1.6rem] ">
       <div>
-        <Image src={image.mobile.slice(1)} alt="" width={64} height={64} />
+        <Image src={image.mobile.slice(1)} alt="item" width={64} height={64} />
       </div>
       <div className=" flex flex-col font-bold  leading-[2.5rem]">
         <p className="w-[7rem] truncate text-[1.5rem] ">{name}</p>
