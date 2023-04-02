@@ -19,12 +19,31 @@ module.exports = {
 
         "best-gear-mobile":
           "url('../assets/shared/mobile/image-best-gear.jpg')",
+        "best-gear-tablet":
+          "url('../assets/shared/tablet/image-best-gear.jpg')",
+        "best-gear-mobile":
+          "url('../assets/shared/desktop/image-best-gear.jpg')",
 
-        // testing bg-image for product images
+        "zx9-speaker-mobile":
+          "url(../assets/home/desktop/image-speaker-zx9.png)",
+        "zx9-speaker-tablet":
+          "url(../assets/home/tablet/image-speaker-zx9.png)",
+        "zx9-speaker-desktop":
+          "url(../assets/home/desktop/image-speaker-zx9.png)",
+
         "zx7-speaker-mobile":
           "url('../assets/home/mobile/image-speaker-zx7.jpg')",
+        "zx7-speaker-tablet":
+          "url('../assets/home/tablet/image-speaker-zx7.jpg')",
+        "zx7-speaker-desktop":
+          "url('../assets/home/desktop/image-speaker-zx7.jpg')",
+
         "yx1-earphones-mobile":
           "url('../assets/home/mobile/image-earphones-yx1.jpg')",
+        "yx1-earphones-tablet":
+          "url('../assets/home/tablet/image-earphones-yx1.jpg')",
+        "yx1-earphones-desktop":
+          "url('../assets/home/desktop/image-earphones-yx1.jpg')",
       },
     },
   },

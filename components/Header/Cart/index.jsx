@@ -1,10 +1,8 @@
-import React from "react";
-
-import { useSelector } from "react-redux";
-import CartItem from "./CartItem";
+import { useDispatch, useSelector } from "react-redux";
 
 import { emptyCart } from "@/features/cart/cartSlice";
-import { useDispatch } from "react-redux";
+import CartItem from "./CartItem";
+
 const Cart = ({ setIsOpen }) => {
   const cart = useSelector((state) => state.cart);
 
@@ -22,8 +20,14 @@ const Cart = ({ setIsOpen }) => {
   };
 
   return (
-    <div>
-      <div className="absolute right-[25px] top-[100px] left-[25px] z-10 overflow-hidden rounded-xl bg-white px-[2.8rem] py-[3.2rem]">
+    <>
+      <div
+        onClick={() => {
+          setIsOpen(false);
+        }}
+        className="modalBg absolute top-0 right-0 bottom-0  w-[100%] border border-red-800 bg-black bg-opacity-20 "
+      ></div>
+      <div className="absolute right-[25px] top-[24px] left-[25px] z-10 overflow-hidden rounded-xl bg-white px-[2.8rem] py-[3.2rem] outline">
         <div className="mb-[3.1rem] flex justify-between">
           <p className="text-[1.8rem] font-bold leading-[2.4590rem] tracking-[.129rem]">
             CART <span>({getTotal().totalQuantity})</span>
@@ -60,13 +64,7 @@ const Cart = ({ setIsOpen }) => {
           CHECKOUT
         </button>
       </div>
-      <div
-        onClick={() => {
-          setIsOpen(false);
-        }}
-        className="modalBg absolute top-0 right-0 h-[100vh] w-[100%] bg-black bg-opacity-20 "
-      ></div>
-    </div>
+    </>
   );
 };
 
