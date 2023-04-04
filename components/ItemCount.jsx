@@ -1,15 +1,10 @@
-import React from "react";
-
-import { useDispatch } from "react-redux";
-import { addToCart } from "../features/cart/cartSlice";
-
+import { useDispatch, useSelector } from "react-redux";
 import {
-  incrementQuantity,
   decrementQuantity,
-  removeItem,
+  incrementQuantity,
 } from "../features/cart/cartSlice";
 
-import { useSelector } from "react-redux";
+import { addToCart } from "../features/cart/cartSlice";
 
 const ItemCount = ({ item }) => {
   const dispatch = useDispatch();
@@ -38,17 +33,19 @@ const ItemCount = ({ item }) => {
 
   return (
     <div className="flex gap-[1.6rem] ">
-      <div className="flex items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[1px] ">
+      <div className="flex items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[.1rem] ">
         <button
           onClick={handleDecrementBtnClick}
-          className="px-[1.5rem] py-[1rem]"
+          className="px-[1.5rem] py-[1rem] outline"
         >
           -
         </button>
-        <p className="px-[0.5rem]">{cartItem ? cartItem.quantity : 0}</p>
+        <p className="px-[0.5rem] outline">
+          {cartItem ? cartItem.quantity : 0}
+        </p>
         <button
           onClick={handleIncrementBtnClick}
-          className="px-[1.5rem] py-[1rem]"
+          className="px-[1.5rem] py-[1rem] outline"
         >
           +
         </button>
@@ -56,7 +53,7 @@ const ItemCount = ({ item }) => {
       <div>
         <button
           onClick={() => dispatch(addToCart(item))}
-          className="bg-[#D87D4A] px-[3.5rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] text-white"
+          className="bg-[#D87D4A] px-[3.5rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white"
         >
           ADD TO CART
         </button>

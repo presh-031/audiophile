@@ -5,7 +5,7 @@ const BackBtn = () => {
   return (
     <button
       onClick={() => router.back()}
-      className="mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] text-[#000000] opacity-50"
+      className="mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] text-[#000000] opacity-50 outline"
     >
       Go Back
     </button>

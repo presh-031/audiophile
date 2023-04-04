@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { emptyCart } from "@/features/cart/cartSlice";
 import CartItem from "./CartItem";
 
-const Cart = ({ setIsOpen }) => {
+const Cart = ({ setCartIsOpen }) => {
   const cart = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const Cart = ({ setIsOpen }) => {
     <>
       <div
         onClick={() => {
-          setIsOpen(false);
+          setCartIsOpen(false);
         }}
         className="modalBg absolute top-0 right-0 bottom-0  w-[100%] border border-red-800 bg-black bg-opacity-20 "
       ></div>
@@ -35,7 +35,7 @@ const Cart = ({ setIsOpen }) => {
           <p
             onClick={() => {
               dispatch(emptyCart());
-              setIsOpen((prevIsOpen) => !prevIsOpen);
+              setCartIsOpen((prevCartIsOpen) => !prevCartIsOpen);
             }}
             className="text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50 hover:underline"
           >

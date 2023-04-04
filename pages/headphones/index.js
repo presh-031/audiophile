@@ -1,11 +1,7 @@
-import Header from "@/components/Header";
-import React from "react";
-
-import Link from "next/link";
-import { products } from "../../data";
 import AllProducts from "@/components/AllProducts";
 import ProductCategoryTitle from "@/components/ProductCategoryTitle";
 import ProductItem from "@/components/ProductItem";
+import { products } from "../../data";
 
 export const getStaticProps = () => {
   const headphones = [];
@@ -25,7 +21,7 @@ const headphones = ({ headphones }) => {
   return (
     <div>
       <ProductCategoryTitle title="HEADPHONES" />
-      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem]">
+      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem] sm:px-[4rem]">
         {headphones
           // methods to reverse array, and map through in that reverse order.
           .slice(0)

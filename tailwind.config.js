@@ -17,13 +17,6 @@ module.exports = {
 
         "pattern-circles": "url('../assets/home/desktop/pattern-circles.svg')",
 
-        "best-gear-mobile":
-          "url('../assets/shared/mobile/image-best-gear.jpg')",
-        "best-gear-tablet":
-          "url('../assets/shared/tablet/image-best-gear.jpg')",
-        "best-gear-mobile":
-          "url('../assets/shared/desktop/image-best-gear.jpg')",
-
         "zx9-speaker-mobile":
           "url(../assets/home/desktop/image-speaker-zx9.png)",
         "zx9-speaker-tablet":
@@ -44,6 +37,13 @@ module.exports = {
           "url('../assets/home/tablet/image-earphones-yx1.jpg')",
         "yx1-earphones-desktop":
           "url('../assets/home/desktop/image-earphones-yx1.jpg')",
+
+        "best-gear-mobile":
+          "url('../assets/shared/mobile/image-best-gear.jpg')",
+        "best-gear-tablet":
+          "url('../assets/shared/tablet/image-best-gear.jpg')",
+        "best-gear-mobile":
+          "url('../assets/shared/desktop/image-best-gear.jpg')",
       },
     },
   },
