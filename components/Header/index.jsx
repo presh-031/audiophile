@@ -1,14 +1,14 @@
+import "react-sliding-side-panel/lib/index.css";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import logo from "../../assets/shared/desktop/logo.svg";
 import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
 import Cart from "./Cart/index";
 import MenuItems from "./MenuItems";
-import NavMenu from "./NavMenu";
-// To show the number of items on cart btn
-import { useState } from "react";
 
 const Header = () => {
   const cart = useSelector((state) => state.cart);
@@ -22,7 +22,9 @@ const Header = () => {
   };
 
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
+  // const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
+
+  // const [openPanel, setOpenPanel] = useState(false);
 
   return (
     <div className="bg-[#101010]">
@@ -31,11 +33,13 @@ const Header = () => {
           src={hamburgerMenu}
           alt="menu"
           onClick={() => {
-            setNavMenuIsOpen((prevNavMenuIsOpen) => !prevNavMenuIsOpen);
+            // setNavMenuIsOpen((prevNavMenuIsOpen) => !prevNavMenuIsOpen);
+            // setOpenPanel((prev) => !prev);
           }}
         />
 
-        {navMenuIsOpen && <NavMenu />}
+        {/* {navMenuIsOpen && <NavMenu />} */}
+        {/* <NavMenu style={navMenuIsOpen ? visibleStyle : hiddenStyle} /> */}
 
         <div className="flex items-center sm:flex-1">
           <Link href={"/"}>
@@ -51,7 +55,7 @@ const Header = () => {
           onClick={() => {
             setCartIsOpen((prevCartIsOpen) => !prevCartIsOpen);
           }}
-          className="relative border border-red-800 "
+          className="relative"
         >
           <Image src={cartIcon} alt="cart" />
           <p className="absolute top-4 left-[-2px] flex h-6 w-6 items-center  justify-center rounded-full bg-white text-black">
@@ -61,7 +65,7 @@ const Header = () => {
       </header>
 
       {cartIsOpen && (
-        <div className="relative  border border-red-800">
+        <div className="relative">
           <Cart setCartIsOpen={setCartIsOpen} />
         </div>
       )}

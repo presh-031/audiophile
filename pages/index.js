@@ -1,8 +1,8 @@
-import Head from "next/head";
-
 import AllProducts from "@/components/AllProducts";
+import NavMenu from "@/components/Header/NavMenu";
 import HomePageProducts from "@/components/HomePageProducts";
 import SubHeader from "@/components/SubHeader";
+import Head from "next/head";
 
 // import { Inter } from "@next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <NavMenu />
         <SubHeader />
         <AllProducts />
         <HomePageProducts />

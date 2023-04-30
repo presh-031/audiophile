@@ -5,7 +5,7 @@ import ProductCategory from "./ProductCategory";
 
 const AllProducts = () => {
   return (
-    <div className="px-[2.4rem] sm:flex sm:justify-between sm:gap-[1rem] sm:px-[4rem] sm:outline">
+    <div className="px-[2.4rem] sm:flex sm:justify-between sm:gap-[1rem] sm:px-[4rem]">
       <ProductCategory categoryImg={headPhones} categoryTitle="HEADPHONES" />
       <ProductCategory categoryImg={speakers} categoryTitle="SPEAKERS" />
       <ProductCategory categoryImg={earPhones} categoryTitle="EARPHONES" />

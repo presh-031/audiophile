@@ -1,22 +1,19 @@
-import React from "react";
-
-import Header from "./Header";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 import About from "./About";
 import Footer from "./Footer";
+import Header from "./Header";
+// persistor
+import { persistor } from "../store/store";
+// Logic for cart
+import { store } from "../store/store";
 
 // Font optimization.
 // import { Manrope } from "@next/font/google";
 // const manrope = Manrope({ subsets: ["latin"] });
 
-// Logic for cart
-import { store } from "../store/store";
-import { Provider } from "react-redux";
-
-// persistor
-import { persistor } from "../store/store";
-import { PersistGate } from "redux-persist/integration/react";
-
 const Layout = ({ children }) => {
+  const value = false;
   return (
     <Provider store={store}>
       <PersistGate

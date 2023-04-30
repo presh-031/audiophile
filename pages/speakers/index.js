@@ -19,7 +19,7 @@ export const getStaticProps = () => {
 
 const speakers = ({ speakers }) => {
   return (
-    <div>
+    <>
       <ProductCategoryTitle title="SPEAKERS" />
       <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem]">
         {speakers
@@ -31,7 +31,7 @@ const speakers = ({ speakers }) => {
           })}
       </div>
       <AllProducts />
-    </div>
+    </>
   );
 };
 
