@@ -4,7 +4,7 @@ import arrowRight from "../../assets/shared/desktop/icon-arrow-right.svg";
 
 const ProductCategory = ({ categoryImg, categoryTitle }) => {
   return (
-    <div className=" mt-[6.8rem] flex flex-col items-center bg-[#f1f1f1] text-center sm:mt-[5rem] sm:w-full">
+    <div className=" mt-[6.8rem] flex flex-col items-center rounded-[.8rem] bg-[#f1f1f1] text-center sm:mt-[5rem] sm:w-full">
       <Image
         className="relative top-[-5.2rem] mb-[-5.2rem]"
         src={categoryImg}

@@ -39,7 +39,7 @@ const ProductItem = ({ item }) => {
   return (
     <div className="">
       {/* check tablet images */}
-      <div className="mb-[3.2rem] bg-[#f1f1f1]">
+      <div className="mb-[3.2rem] bg-[#f1f1f1] sm:mb-[5.2rem]">
         <Image
           // .slice(1) to remove the initial '.' in the filepath string the json returns
           // so that the filepath referenced starts with a '/', as the assets are in the public folder.
@@ -50,7 +50,8 @@ const ProductItem = ({ item }) => {
           className="sm:bg-[ #F1F1F1] mx-auto  sm:mb-[5.2rem]"
         />
       </div>
-      <div className="flex flex-col  items-center gap-[2.4rem] text-center  sm:mx-auto sm:w-[85%] sm:gap-0">
+
+      <div className="flex flex-col items-center  gap-[2.4rem] text-center outline  sm:mx-auto sm:w-[85%] sm:gap-0">
         {item.new && (
           <p className="text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[1rem] text-[#d87d4a] sm:mb-[1.6rem]">
             new product
