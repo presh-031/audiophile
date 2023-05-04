@@ -4,6 +4,7 @@ import BackBtn from "@/components/BackBtn";
 import Comparables from "@/components/Comparables";
 import ProductFeatures from "@/components/ProductFeatures";
 import ProductGallery from "@/components/ProductGallery";
+import ProductPage from "@/ui/ProductPage";
 import { products } from "../../data";
 
 export const getStaticPaths = () => {
@@ -43,13 +44,13 @@ const ProductDetail = ({ earphone }) => {
   console.log(product);
   return (
     <>
-      <div className="px-[2.4rem] pt-[1.90rem]">
+      <ProductPage>
         <BackBtn />
         <AboutProduct image={image} product={product} />
         <ProductFeatures product={product} />
         <ProductGallery gallery={gallery} />
         <Comparables comparables={product.others} />
-      </div>
+      </ProductPage>
       <AllProducts />
     </>
   );

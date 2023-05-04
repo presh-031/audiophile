@@ -22,32 +22,23 @@ const Header = () => {
   };
 
   const [cartIsOpen, setCartIsOpen] = useState(false);
-  // const [navMenuIsOpen, setNavMenuIsOpen] = useState(false);
-
-  // const [openPanel, setOpenPanel] = useState(false);
-
   return (
-    <div className="bg-[#101010]">
-      <header className="flex items-center justify-between  py-[2.2rem]  px-[2.4rem] sm:justify-start sm:gap-[4.2rem] sm:py-[3.2rem] sm:px-[4rem]">
+    <>
+      <header className="flex items-center justify-between bg-[#101010]  py-[2.2rem]  px-[2.4rem]  sm:justify-start sm:gap-[4.2rem] sm:py-[3.2rem] sm:px-[4rem] lg:justify-between lg:py-[3.5rem]  xl:px-[16.5rem] ">
         <Image
+          className=" lg:hidden"
           src={hamburgerMenu}
           alt="menu"
-          onClick={() => {
-            // setNavMenuIsOpen((prevNavMenuIsOpen) => !prevNavMenuIsOpen);
-            // setOpenPanel((prev) => !prev);
-          }}
+          onClick={() => {}}
         />
 
-        {/* {navMenuIsOpen && <NavMenu />} */}
-        {/* <NavMenu style={navMenuIsOpen ? visibleStyle : hiddenStyle} /> */}
-
-        <div className="flex items-center sm:flex-1">
+        <div className="flex items-center border border-red-800 sm:flex-1 lg:flex-none">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />
           </Link>
         </div>
 
-        <div className="hidden">
+        <div className="hidden lg:block lg:text-white lg:outline">
           <MenuItems />
         </div>
 
@@ -69,7 +60,7 @@ const Header = () => {
           <Cart setCartIsOpen={setCartIsOpen} />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

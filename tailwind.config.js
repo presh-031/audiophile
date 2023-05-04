@@ -42,7 +42,7 @@ module.exports = {
           "url('../assets/shared/mobile/image-best-gear.jpg')",
         "best-gear-tablet":
           "url('../assets/shared/tablet/image-best-gear.jpg')",
-        "best-gear-mobile":
+        "best-gear-desktop":
           "url('../assets/shared/desktop/image-best-gear.jpg')",
       },
     },

@@ -2,8 +2,8 @@ import ButtonOne from "./ButtonOne";
 
 const SubHeader = () => {
   return (
-    <div className="mb-[8.4rem] h-[51rem] bg-black bg-subheader-mobile bg-cover bg-center bg-no-repeat pt-[10.8rem] text-center text-white sm:mb-[9.5rem] sm:h-fit sm:bg-subheader-tablet  sm:bg-bottom sm:pt-[12.6rem] sm:pb-[16.7rem] ">
-      <div className=" px-8 outline sm:mx-auto sm:w-[40rem] sm:px-0">
+    <div className="mb-[8.4rem] h-[51rem] bg-black bg-subheader-mobile bg-cover bg-center bg-no-repeat pt-[10.8rem] text-white  sm:mb-[9.5rem] sm:h-fit sm:bg-subheader-tablet sm:bg-bottom sm:pt-[12.6rem] sm:pb-[16.7rem]  lg:mb-[12rem] lg:flex lg:bg-none lg:py-0">
+      <div className="px-8 text-center outline sm:mx-auto sm:w-[40rem] sm:px-0 lg:text-left">
         <p className="text-[1.4rem] font-normal leading-[1.91rem] tracking-[10px] text-[#fafafa] opacity-50">
           NEW PRODUCT
         </p>
@@ -16,6 +16,7 @@ const SubHeader = () => {
         </p>
         <ButtonOne url={"/headphones/xx99-mark-two-headphones"} />
       </div>
+      <div className="hidden outline lg:block lg:h-[632px] lg:w-[200px] lg:bg-subheader-desktop"></div>
     </div>
   );
 };
