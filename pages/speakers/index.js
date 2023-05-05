@@ -27,7 +27,13 @@ const speakers = ({ speakers }) => {
           .slice(0)
           .reverse()
           .map((headphone) => {
-            return <ProductItem key={headphone.id} item={headphone} />;
+            return (
+              <ProductItem
+                key={headphone.id}
+                item={headphone}
+                reverse={index % 2 !== 0}
+              />
+            );
           })}
       </div>
       <AllProducts />
