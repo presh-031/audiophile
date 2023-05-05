@@ -26,11 +26,11 @@ const earphones = ({ earphones }) => {
           // methods to reverse array, and map through in that reverse order.
           .slice(0)
           .reverse()
-          .map((headphone) => {
+          .map((earphone, index) => {
             return (
               <ProductItem
-                key={headphone.id}
-                item={headphone}
+                key={earphone.id}
+                item={earphone}
                 reverse={index % 2 !== 0}
               />
             );
