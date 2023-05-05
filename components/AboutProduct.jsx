@@ -3,29 +3,27 @@ import ItemCount from "./ItemCount";
 
 const AboutProduct = ({ product, image }) => {
   return (
-    <div className="mb-[8.80rem] outline sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%]">
-      {/* <div className="w-[32.7rem] h-[32.7rem] "> */}
+    <div className="mb-[8.80rem] outline sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%] lg:mb-[16rem] lg:items-center">
       <Image
         src={image.slice(1)}
         alt="product"
         height={327}
         width={327}
-        className=" sm:h-[48rem] sm:w-[28.1rem]"
+        className=" sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-[49%]"
       />
-      {/* </div> */}
-      <div className="pt-[7.8rem] pb-[4.5rem] outline">
+      <div className="pt-[7.8rem] pb-[4.5rem] outline lg:p-0">
         {product.new && (
-          <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[1rem] text-[#d87d4a] sm:mb-[1.7rem] sm:text-[1.2rem] sm:leading-[1.6rem] sm:tracking-[0.85rem]">
+          <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[1rem] text-[#d87d4a] sm:mb-[1.7rem] sm:text-[1.2rem] sm:leading-[1.6rem] sm:tracking-[0.85rem] lg:m-0 lg:mb-[1.6rem]">
             new product
           </p>
         )}
-        <p className="mb-[2.4rem] text-[2.80rem] font-bold uppercase leading-[3.83rem] tracking-[.1rem] sm:mb-[3.2rem] sm:leading-[3.2rem]">
+        <p className="mb-[2.4rem] text-[2.80rem] font-bold uppercase leading-[3.83rem] tracking-[.1rem] sm:mb-[3.2rem] sm:leading-[3.2rem] lg:mb-[3.2rem] lg:text-[4rem] lg:leading-[4.4rem] lg:tracking-[0.14rem]">
           {product.name}
         </p>
-        <p className=" mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] opacity-50 sm:mb-[3.2rem]">
+        <p className=" mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] opacity-50 sm:mb-[3.2rem] lg:mb-[3.2rem]">
           {product.description}
         </p>
-        <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[.129rem]">
+        <p className="mb-[3.1rem] text-[1.80rem] font-bold leading-[2.459rem] tracking-[.129rem] lg:mb-[4.7rem]">
           ${product.price}
         </p>
         <ItemCount item={product} />
