@@ -36,7 +36,7 @@ const earphones = ({ earphones }) => {
             );
           })}
       </div>
-      <AllProducts />2
+      <AllProducts />
     </div>
   );
 };
