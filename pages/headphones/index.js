@@ -21,13 +21,19 @@ const headphones = ({ headphones }) => {
   return (
     <div>
       <ProductCategoryTitle title="HEADPHONES" />
-      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem] sm:px-[4rem]">
+      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem] sm:px-[4rem] lg:mb-[16rem] lg:gap-[16.5rem] xl:px-[16.5rem]">
         {headphones
           // methods to reverse array, and map through in that reverse order.
           .slice(0)
           .reverse()
-          .map((headphone) => {
-            return <ProductItem key={headphone.id} item={headphone} />;
+          .map((headphone, index) => {
+            return (
+              <ProductItem
+                key={headphone.id}
+                item={headphone}
+                reverse={index % 2 !== 0}
+              />
+            );
           })}
       </div>
       <AllProducts />

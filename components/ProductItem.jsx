@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import ButtonOne from "./ButtonOne";
 
-const ProductItem = ({ item }) => {
+const ProductItem = ({ item, reverse = false }) => {
   console.log(item);
   console.log(item.image.tablet);
+
+  console.log(reverse);
   // Logic to handle window resizing
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -29,17 +31,18 @@ const ProductItem = ({ item }) => {
     image = item.image.mobile;
   } else if (windowSize.innerWidth < 769) {
     // tablet
-    image = item.image.desktop;
+    image = item.image.tablet;
   } else {
     // desktop
     image = item.image.desktop;
   }
 
-  console.log(image);
   return (
-    <div className="">
+    <div
+      className={`${reverse ? "lg:flex-row-reverse" : ""} lg:flex lg:h-[56rem]`}
+    >
       {/* check tablet images */}
-      <div className="mb-[3.2rem] bg-[#f1f1f1] sm:mb-[5.2rem]">
+      <div className="mb-[3.2rem] bg-[#f1f1f1]  sm:mb-[5.2rem] lg:m-0 lg:flex lg:w-1/2 lg:items-center">
         <Image
           // .slice(1) to remove the initial '.' in the filepath string the json returns
           // so that the filepath referenced starts with a '/', as the assets are in the public folder.
@@ -47,20 +50,24 @@ const ProductItem = ({ item }) => {
           alt="product"
           height={352}
           width={327}
-          className="sm:bg-[ #F1F1F1] mx-auto  sm:mb-[5.2rem]"
+          className="sm:bg-[ #F1F1F1] mx-auto sm:mb-[5.2rem]  lg:object-cover"
         />
       </div>
 
-      <div className="flex flex-col items-center  gap-[2.4rem] text-center sm:mx-auto sm:w-[85%] sm:gap-0">
+      <div
+        className={` ${
+          reverse ? "lg:pr-[11.26%]" : "lg:pl-[11.26%]"
+        } flex flex-col items-center justify-center gap-[2.4rem] text-center  sm:mx-auto sm:w-[85%]  sm:gap-0 lg:w-1/2 lg:items-start  lg:text-left`}
+      >
         {item.new && (
-          <p className="text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[1rem] text-[#d87d4a] sm:mb-[1.6rem]">
+          <p className="text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[1rem] text-[#d87d4a]  sm:mb-[1.6rem]">
             new product
           </p>
         )}
-        <p className=" text-[2.80rem] font-bold uppercase leading-[3.83rem] tracking-[0.1rem] sm:mx-auto sm:mb-[3.2rem] sm:w-[80%] sm:text-[4rem] sm:leading-[4.4rem] sm:tracking-[0.143rem]">
+        <p className=" text-[2.80rem] font-bold uppercase leading-[3.83rem] tracking-[0.1rem]  sm:mx-auto sm:mb-[3.2rem] sm:w-[80%] sm:text-[4rem] sm:leading-[4.4rem] sm:tracking-[0.143rem] lg:w-full">
           {item.name}
         </p>
-        <p className="text-[1.5rem] font-medium leading-[2.5rem] opacity-50 sm:mb-[2.4rem] ">
+        <p className="text-[1.5rem] font-medium leading-[2.5rem] opacity-50 sm:mb-[2.4rem] lg:mb-[4rem]">
           {item.description}
         </p>
         <ButtonOne url={`/${item.category}/${item.slug}`} />

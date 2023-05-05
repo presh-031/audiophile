@@ -21,7 +21,7 @@ const speakers = ({ speakers }) => {
   return (
     <>
       <ProductCategoryTitle title="SPEAKERS" />
-      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem]">
+      <div className="mb-[12rem] flex flex-col gap-[12rem] px-[2.4rem] sm:px-[4rem] lg:mb-[16.5rem] lg:gap-[16rem] xl:px-[16.5rem]">
         {speakers
           // methods to reverse array, and map through in that reverse order.
           .slice(0)
