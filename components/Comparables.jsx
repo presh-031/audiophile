@@ -21,11 +21,11 @@ const Comparables = ({ comparables }) => {
 
   return (
     // see mb
-    <div className="mb-[17.2rem] outline sm:mb-[12rem]">
+    <div className="mb-[17.2rem]   sm:mb-[12rem]">
       <p className="mb-[4rem] text-center text-[2.4rem] font-bold leading-[3.6rem] tracking-[0.086rem]  sm:mb-[5.6rem] sm:text-[3.6rem] sm:tracking-[.114rem] ">
         YOU MAY ALSO LIKE
       </p>
-      <div className=" sm:flex sm:gap-[1.1rem] lg:gap-[3rem]">
+      <div className=" sm:flex sm:gap-[2.15%] lg:gap-[2.7%]">
         {comparables.map((comparable) => {
           // Image src will vary based on the device width
           let image = "";
@@ -43,14 +43,14 @@ const Comparables = ({ comparables }) => {
           return (
             <div
               key={comparable.slug}
-              className="mb-[5.6rem] flex flex-col items-center outline  sm:mb-0  "
+              className="mb-[5.6rem] flex w-full flex-col items-center     sm:mb-0  "
             >
               <Image
                 src={image.slice(1)}
                 alt="product"
                 width={372}
                 height={120}
-                className="mb-[3.2rem] sm:mb-[4rem]"
+                className="mb-[3.2rem] rounded-[8px] min-[400px]:w-full sm:mb-[4rem]"
               />
 
               <p className="mb-[3.2rem] text-center text-[2.4rem] font-bold leading-[3.278rem] tracking-[.171rem]">

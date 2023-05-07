@@ -41,8 +41,8 @@ const ProductGallery = ({ gallery }) => {
   }
 
   return (
-    <div className="mt-[8.8rem] mb-[12rem] outline sm:mt-[15.3rem] sm:flex sm:gap-[1.8rem] lg:mb-[16rem] lg:mt-[16rem] lg:gap-[3rem]">
-      <div className="border border-red-800 sm:flex sm:flex-1 sm:flex-col sm:gap-[2rem] lg:w-[40%] lg:flex-none lg:gap-[3.2rem]">
+    <div className="mt-[8.8rem] mb-[12rem]  sm:mt-[15.3rem] sm:flex sm:gap-[1.8rem] lg:mb-[16rem] lg:mt-[16rem] lg:gap-[3rem]">
+      <div className=" sm:flex sm:flex-1 sm:flex-col sm:gap-[2rem] lg:w-[40%] lg:flex-none lg:gap-[3.2rem]">
         <Image
           src={firstImageSrc}
           alt="product-image"

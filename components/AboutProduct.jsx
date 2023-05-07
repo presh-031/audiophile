@@ -3,15 +3,15 @@ import ItemCount from "./ItemCount";
 
 const AboutProduct = ({ product, image }) => {
   return (
-    <div className="mb-[8.80rem] outline sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%] lg:mb-[16rem] lg:items-center">
+    <div className="mb-[8.80rem]  sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%] lg:mb-[16rem] lg:items-center">
       <Image
         src={image.slice(1)}
         alt="product"
         height={327}
         width={327}
-        className=" sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-[49%]"
+        className="mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-[49%]"
       />
-      <div className="pt-[7.8rem] pb-[4.5rem] outline lg:p-0">
+      <div className="pt-[7.8rem] pb-[4.5rem]  lg:p-0">
         {product.new && (
           <p className="mb-[2.4rem] text-[1.4rem] font-normal uppercase leading-[1.91rem] tracking-[1rem] text-[#d87d4a] sm:mb-[1.7rem] sm:text-[1.2rem] sm:leading-[1.6rem] sm:tracking-[0.85rem] lg:m-0 lg:mb-[1.6rem]">
             new product
