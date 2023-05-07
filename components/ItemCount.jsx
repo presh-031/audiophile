@@ -1,8 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
+import {
+  addedItemToast,
+  addedOneMoreItemToast,
+  removedItemToast,
+  removedOneItemToast,
+} from "@/helpers/toasts";
 import {
   decrementQuantity,
   incrementQuantity,
+  removeItem,
 } from "../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 import { addToCart } from "../features/cart/cartSlice";
 
@@ -15,8 +22,17 @@ const ItemCount = ({ item }) => {
   // To get specific cart item in ui
   const cartItem = cart.find((cartItem) => cartItem.id === item.id);
 
+  console.log(cartItem);
   const handleDecrementBtnClick = () => {
-    dispatch(decrementQuantity(item.id));
+    // should remove item if item in cart is just 1.
+
+    if (cartItem?.quantity > 1) {
+      dispatch(decrementQuantity(item.id));
+      removedOneItemToast();
+    } else {
+      dispatch(removeItem(item.id));
+      removedItemToast();
+    }
   };
 
   const handleIncrementBtnClick = () => {
@@ -26,8 +42,10 @@ const ItemCount = ({ item }) => {
 
     if (cartItem) {
       dispatch(incrementQuantity(item.id));
+      addedOneMoreItemToast();
     } else {
       dispatch(addToCart(item));
+      addedItemToast();
     }
   };
 

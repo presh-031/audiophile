@@ -36,6 +36,20 @@ const checkout = () => {
           </div>
 
           <p>PAYMENT DETAILS</p>
+          <div>
+            <p>Payment Method</p>
+            <div>
+              <div>
+                <input type="radio" id="e-money" />
+                <label htmlFor="e-money">e-Money</label>
+              </div>
+
+              <div>
+                <input type="radio" id="cash-on-delivery" />
+                <label htmlFor="cash-on-delivery">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
