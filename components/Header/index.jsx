@@ -47,13 +47,13 @@ const Header = () => {
           onClick={() => {}}
         />
 
-        <div className="flex items-center border border-red-800 sm:flex-1 lg:flex-none">
+        <div className="flex items-center  sm:flex-1 lg:flex-none">
           <Link href={"/"}>
             <Image src={logo} alt="logo" />
           </Link>
         </div>
 
-        <div className="hidden lg:block lg:text-white lg:outline">
+        <div className="hidden lg:block lg:text-white ">
           <MenuItems />
         </div>
 
