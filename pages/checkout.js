@@ -159,7 +159,7 @@ const checkout = () => {
         </div>
 
         <div>
-          <p>SUMMARY</p>'
+          <p>SUMMARY</p>
         </div>
       </div>
     </div>
