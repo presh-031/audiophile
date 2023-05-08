@@ -1,4 +1,5 @@
 import BackBtn from "@/components/BackBtn";
+import Summary from "@/components/Summary";
 
 const checkout = () => {
   return (
@@ -175,7 +176,7 @@ const checkout = () => {
         </div>
 
         <div>
-          <p>SUMMARY</p>
+          <Summary />
         </div>
       </div>
     </div>
