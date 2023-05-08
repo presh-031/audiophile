@@ -55,7 +55,7 @@ const checkout = () => {
               />
             </div>
 
-            <p>SHIPPING INFO</p>
+            <p className="mt-[0.80rem] mb-[1.6rem]">SHIPPING INFO</p>
             <label
               htmlFor="address"
               className="mb-[0.9rem] block text-[1.2rem] font-bold leading-[1.639rem] tracking-[-0.021rem]"
