@@ -3,14 +3,11 @@ import "reactjs-popup/dist/index.css";
 
 import { useDispatch, useSelector } from "react-redux";
 
-import { emptyCart } from "@/features/cart/cartSlice";
 import Image from "next/image";
 import Link from "next/link";
-import Popup from "reactjs-popup";
-import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import logo from "../../assets/shared/desktop/logo.svg";
 import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
-import CartItem from "./Cart/CartItem";
+import Cart from "./Cart";
 import MenuItems from "./MenuItems";
 
 const Header = () => {
@@ -57,7 +54,8 @@ const Header = () => {
           <MenuItems />
         </div>
 
-        <Popup
+        <Cart />
+        {/* <Popup
           trigger={
             <div className="relative">
               <Image src={cartIcon} alt="cart" />
@@ -70,7 +68,7 @@ const Header = () => {
           nested
         >
           {(close) => (
-            <div className="w-fit rounded-xl bg-white px-[2.8rem] py-[3.2rem] outline">
+            <div className=" rounded-xl bg-white px-[2.8rem] py-[3.2rem] outline">
               <div className="mb-[3.1rem] flex justify-between outline">
                 <p className="text-[1.8rem] font-bold leading-[2.4590rem] tracking-[.129rem]">
                   CART <span>({getTotal().totalQuantity})</span>
@@ -108,7 +106,7 @@ const Header = () => {
               </button>
             </div>
           )}
-        </Popup>
+        </Popup> */}
       </header>
     </>
   );
