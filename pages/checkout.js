@@ -5,12 +5,12 @@ const checkout = () => {
     <div className="px-[2.4rem]">
       <BackBtn />
       <div>
-        <div className="bg-[#FFFFFF] outline">
-          <p className="mb-[3.2rem] text-[2.8rem] font-bold leading-[3.825rem] tracking-[0.1rem]">
+        <div className="rounded-[8px] bg-[#FFFFFF] px-[3.2rem] pb-[3.1rem] pt-[2.4rem] ">
+          <p className="mb-[2.3rem] text-[2.8rem] font-bold leading-[3.825rem] tracking-[0.1rem]">
             CHECKOUT
           </p>
 
-          <form className="outline">
+          <form className="">
             <p className="mb-[1.6rem] text-[1.3rem] font-bold leading-[2.5rem] tracking-[0.093rem] text-[#d87d4a]">
               BILLING DETAILS
             </p>
@@ -25,7 +25,7 @@ const checkout = () => {
                 type="text"
                 placeholder="Alexel Ward"
                 id="name"
-                className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+                className="mb-[2.4rem] block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
               />
 
               <label
@@ -35,7 +35,7 @@ const checkout = () => {
                 Email Address
               </label>
               <input
-                className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+                className="mb-[2.4rem] block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
                 type="text"
                 placeholder="alexel@mail.com"
                 id="email"
@@ -48,14 +48,16 @@ const checkout = () => {
                 Phone Number
               </label>
               <input
-                className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+                className="mb-[2.4rem]  block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
                 type="phone"
                 placeholder="+1 202-555-0136"
                 id="phone"
               />
             </div>
 
-            <p className="mt-[0.80rem] mb-[1.6rem]">SHIPPING INFO</p>
+            <p className="mt-[0.80rem] mb-[1.6rem] text-[1.3rem] font-bold leading-[2.5rem] tracking-[0.093rem] text-[#d87d4a]">
+              SHIPPING INFO
+            </p>
             <label
               htmlFor="address"
               className="mb-[0.9rem] block text-[1.2rem] font-bold leading-[1.639rem] tracking-[-0.021rem]"
@@ -66,7 +68,7 @@ const checkout = () => {
               type="text"
               placeholder="1137 Williams Avenue"
               id="address"
-              className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+              className="mb-[2.4rem] block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
             />
 
             <div>
@@ -77,7 +79,7 @@ const checkout = () => {
                 Email Address
               </label>
               <input
-                className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+                className="mb-[2.4rem] block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
                 type="text"
                 placeholder="10001"
                 id="zip-code"
@@ -90,7 +92,7 @@ const checkout = () => {
                 City
               </label>
               <input
-                className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+                className="mb-[2.4rem] block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
                 type="text"
                 placeholder="New York"
                 id="city"
@@ -103,25 +105,39 @@ const checkout = () => {
                 Country
               </label>
               <input
-                className="mb-[2.4rem] block w-full border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
+                className="mb-[2.4rem] block w-full rounded-[8px] border-[1px] border-[#CFCFCF] px-[2.4rem] py-[1.8rem] text-[1.4rem] font-bold leading-[1.912rem] tracking-[-0.025rem] text-[#000000] outline-none placeholder:opacity-40"
                 type="text"
                 placeholder="United States"
                 id="country"
               />
             </div>
 
-            <p>PAYMENT DETAILS</p>
+            <p className="mt-[0.80rem] mb-[1.6rem] text-[1.3rem] font-bold leading-[2.5rem] tracking-[0.093rem] text-[#d87d4a]">
+              PAYMENT DETAILS
+            </p>
             <div>
-              <p>Payment Method</p>
+              <p className="mb-[1.7rem] text-[1.2rem]  font-bold leading-[1.639rem] tracking-[-0.021rem]">
+                Payment Method
+              </p>
               <div>
-                <div>
+                <div className="mb-[1.6rem]  flex items-center gap-[1.6rem] rounded-[8px]  border-[1px] border-[#cfcfcf] px-[1.6rem] py-[1.8rem]">
                   <input type="radio" id="e-money" />
-                  <label htmlFor="e-money">e-Money</label>
+                  <label
+                    htmlFor="e-money"
+                    className="text-[1.4rem] font-bold leading-[1.012rem] tracking-[-0.025rem]"
+                  >
+                    e-Money
+                  </label>
                 </div>
 
-                <div>
+                <div className="flex items-center gap-[1.6rem] rounded-[8px]  border-[1px] border-[#cfcfcf] px-[1.6rem] py-[1.8rem]">
                   <input type="radio" id="cash-on-delivery" />
-                  <label htmlFor="cash-on-delivery">Cash on Delivery</label>
+                  <label
+                    htmlFor="cash-on-delivery"
+                    className="text-[1.4rem] font-bold leading-[1.012rem] tracking-[-0.025rem]"
+                  >
+                    Cash on Delivery
+                  </label>
                 </div>
               </div>
             </div>
@@ -129,7 +145,7 @@ const checkout = () => {
               <div>
                 <label
                   htmlFor="e-money-number"
-                  className="mb-[0.9rem] block text-[1.2rem] font-bold leading-[1.639rem] tracking-[-0.021rem]"
+                  className="mb-[0.9rem] mt-[3.2rem] block text-[1.2rem] font-bold leading-[1.639rem] tracking-[-0.021rem]"
                 >
                   e-Money Number
                 </label>
