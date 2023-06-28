@@ -60,8 +60,8 @@ const ProductDetail = ({ headphone }) => {
   if (windowSize.innerWidth < 640) {
     // mobile
     image = product.image.mobile;
-  } else if (windowSize.innerWidth < 769) {
-    // tablet
+  } else if (windowSize.innerWidth < 1025) {
+    // tablet;
     image = product.image.tablet;
   } else {
     // desktop

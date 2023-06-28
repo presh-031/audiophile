@@ -18,17 +18,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* popup styles */
 .my-popup-content {
   margin: auto;
   background: rgb(255, 255, 255);
-  width: 50%;
-  padding: 5px;
+  width: 100%;
+  /* padding: 5px; */
+  outline: 1px solid red;
 }
 .my-popup-arrow {
   color: rgb(255, 255, 255);
 }
 [role="tooltip"].my-popup-content {
   width: 200px;
+  outline: 1px solid red;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
 }
 
