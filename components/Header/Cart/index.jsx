@@ -46,7 +46,7 @@ const Cart = ({ close }) => {
       nested
     >
       {(close) => (
-        <div className=" rounded-xl bg-white px-[2.8rem] py-[3.2rem] outline">
+        <div className=" my-popup rounded-xl bg-white px-[2.8rem] py-[3.2rem] outline">
           <div className="mb-[3.1rem] flex justify-between">
             <p className="text-[1.8rem] font-bold leading-[2.4590rem] tracking-[.129rem]">
               CART <span>({getTotal().totalQuantity})</span>
