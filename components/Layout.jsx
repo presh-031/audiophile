@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         // loading={<Loader />}
         persistor={persistor}
       >
-        <div className="bg-[#f2f2f2]">
+        <div className="">
           <Toaster />
           {/* <div className={manrope.className}> */}
           <Header />
