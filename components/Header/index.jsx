@@ -54,7 +54,7 @@ const Header = () => {
           <MenuItems />
         </div>
 
-        {/* <Cart /> */}
+        <Cart />
 
         {/* <Popup
           trigger={
