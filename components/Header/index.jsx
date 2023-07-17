@@ -1,6 +1,3 @@
-import "react-sliding-side-panel/lib/index.css";
-import "reactjs-popup/dist/index.css";
-
 import { useDispatch, useSelector } from "react-redux";
 
 import Image from "next/image";
