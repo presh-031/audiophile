@@ -39,7 +39,6 @@ const Header = () => {
   // Modal logic
   const { isVisible, toggleModal } = useModal();
 
-  // const [cartIsOpen, setCartIsOpen] = useState(false);
   return (
     <>
       <header className="flex items-center justify-between  bg-[#101010]  py-[2.2rem]  px-[2.4rem]  sm:justify-start sm:gap-[4.2rem] sm:py-[3.2rem] sm:px-[4rem] lg:justify-between lg:py-[3.5rem]  xl:px-[16.5rem] ">

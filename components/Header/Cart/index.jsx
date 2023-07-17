@@ -1,14 +1,12 @@
-import "reactjs-popup/dist/index.css";
-
 import { useDispatch, useSelector } from "react-redux";
 
 import { emptyCart } from "@/features/cart/cartSlice";
-import Image from "next/image";
-import Popup from "reactjs-popup";
-import cartIcon from "../../../assets/shared/desktop/icon-cart.svg";
 import CartItem from "./CartItem";
+import { useRouter } from "next/router";
+import { cartIsEmpty } from "@/helpers/toasts";
 
 const Cart = ({ hideModal }) => {
+  // cart logic
   const cart = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
@@ -32,6 +30,16 @@ const Cart = ({ hideModal }) => {
     return { totalPrice, totalQuantity };
   };
 
+  const router = useRouter();
+  const handleCheckoutBtnClick = () => {
+    if (getTotal().totalQuantity) {
+      hideModal();
+      router.push("/checkout");
+    } else {
+      hideModal();
+      cartIsEmpty();
+    }
+  };
   return (
     <div
       onClick={hideModal}
@@ -76,7 +84,11 @@ const Cart = ({ hideModal }) => {
               ${getTotal().totalPrice}
             </p>
           </div>
-          <button className="w-full bg-[#D87D4A] bg-[] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline">
+          <button
+            role="button"
+            onClick={handleCheckoutBtnClick}
+            className="w-full bg-[#D87D4A] bg-[] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline"
+          >
             CHECKOUT
           </button>
         </div>

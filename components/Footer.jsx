@@ -33,7 +33,7 @@ const Footer = () => {
         </div>{" "}
         <div className="mt-[4.8rem]   sm:mt-[8.0rem] sm:flex sm:justify-between lg:mt-[5.6rem] ">
           <p className=" opacity-50 ">Copyright 2021. All Rights Reserved</p>
-          <div className=" flex items-center justify-center  gap-[1.6rem] sm:mt-0 lg:hidden">
+          <div className=" mt-[4.8rem] flex items-center justify-center  gap-[1.6rem] sm:mt-0 lg:hidden">
             <Image src={facebook} alt="facebook" />
             <Image src={twitter} alt="twitter" />
             <Image src={instagram} alt="instagram" />
