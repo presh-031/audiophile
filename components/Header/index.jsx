@@ -7,11 +7,12 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../assets/shared/desktop/logo.svg";
 import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
-import CartModal from "./CartModal";
+import Cart from "./Cart";
 import MenuItems from "./MenuItems";
 
 import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import useModal from "@/hooks/useModal";
+import Modal from "@/ui/Modal";
 const Header = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -66,7 +67,9 @@ const Header = () => {
           </p>
         </div>
 
-        <CartModal isVisible={isVisible} hideModal={toggleModal} />
+        <Modal isVisible={isVisible} hideModal={toggleModal}>
+          <Cart hideModal={toggleModal} />
+        </Modal>
       </header>
     </>
   );
