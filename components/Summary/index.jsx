@@ -54,6 +54,8 @@ const Summary = () => {
         <span>GRAND TOTAL</span>
         <span>${grandTotal}</span>
       </div>
+
+      <button role="button">CONTINUE & PAY</button>
     </div>
   );
 };
