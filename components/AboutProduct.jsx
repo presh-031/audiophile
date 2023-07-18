@@ -14,8 +14,8 @@ const AboutProduct = ({ product, image }) => {
     <div className="mb-[8.80rem]  sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%] lg:mb-[16rem] lg:items-center">
       {isLoading && (
         <div
-          className={`"flex  justify-center" : "" h-[32.7rem]
-           w-[32.7rem] items-center sm:h-[48rem] sm:min-w-[28.1rem] lg:h-[56rem] lg:min-w-[49%]`}
+          className="flex  h-[32.7rem] w-[32.7rem]
+           items-center justify-center sm:h-[48rem] sm:min-w-[28.1rem] lg:h-[56rem] lg:min-w-[49%]"
         >
           <Loader />
         </div>
