@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
 import AllProducts from "../AllProducts";
 
+import css from "./HamburgerMenu.module.css";
 const HamburgerMenu = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
@@ -13,7 +14,15 @@ const HamburgerMenu = () => {
   console.log(menuIsOpen);
   return (
     <div className=" lg:hidden">
-      <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} />
+      {/* <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} /> */}
+
+      <label for="burger" className={css.burger}>
+        <input id="burger" type="checkbox" onClick={handleMenu} />
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
       <div
         onClick={handleMenu}
         className={`absolute ${
