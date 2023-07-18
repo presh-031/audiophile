@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import arrowRight from "../../assets/shared/desktop/icon-arrow-right.svg";
 
-const ProductCategory = ({ categoryImg, categoryTitle }) => {
+const ProductCategory = ({ categoryImg, categoryTitle, handleMenu }) => {
   return (
     <div className=" mt-[6.8rem] flex flex-col items-center rounded-[.8rem] bg-[#f1f1f1] text-center  sm:mt-[5rem] sm:w-full">
       <Image
@@ -17,6 +17,7 @@ const ProductCategory = ({ categoryImg, categoryTitle }) => {
       </p>
       <Link
         href={`/${categoryTitle.toLowerCase()}`}
+        onClick={handleMenu}
         className="mt-[1.7rem] mb-[2.2rem] flex justify-center gap-[1.3rem] lg:mt-[1.5rem] lg:mb-[3rem] "
       >
         <p className="text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] opacity-50">

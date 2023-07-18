@@ -1,5 +1,5 @@
 import AllProducts from "@/components/AllProducts";
-import NavMenu from "@/components/Header/NavMenu";
+import NavMenu from "@/components/Header/HamburgerMenu";
 import HomePageProducts from "@/components/HomePageProducts";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";
@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <NavMenu />
+        {/* <NavMenu /> */}
         <SubHeader />
         <AllProducts />
         <HomePageProducts />

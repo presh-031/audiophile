@@ -40,6 +40,7 @@ const Cart = ({ hideModal }) => {
       cartIsEmpty();
     }
   };
+
   return (
     <div
       onClick={hideModal}
@@ -66,6 +67,7 @@ const Cart = ({ hideModal }) => {
               Remove all
             </p>
           </div>
+
           {cart?.map((item) => (
             <CartItem
               key={item.id}
@@ -76,6 +78,7 @@ const Cart = ({ hideModal }) => {
               quantity={item.quantity}
             />
           ))}
+
           <div className="mt-[3.2rem] mb-[2.4rem] flex justify-between ">
             <p className="text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50">
               TOTAL
@@ -84,6 +87,7 @@ const Cart = ({ hideModal }) => {
               ${getTotal().totalPrice}
             </p>
           </div>
+
           <button
             role="button"
             onClick={handleCheckoutBtnClick}

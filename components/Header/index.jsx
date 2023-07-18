@@ -10,6 +10,9 @@ import MenuItems from "./MenuItems";
 import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import useModal from "@/hooks/useModal";
 import Modal from "@/ui/Modal";
+
+import HamburgerMenu from "./HamburgerMenu";
+
 const Header = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -37,37 +40,30 @@ const Header = () => {
   const { isVisible, toggleModal } = useModal();
 
   return (
-    <>
-      <header className="flex items-center justify-between  bg-[#101010]  py-[2.2rem]  px-[2.4rem]  sm:justify-start sm:gap-[4.2rem] sm:py-[3.2rem] sm:px-[4rem] lg:justify-between lg:py-[3.5rem]  xl:px-[16.5rem] ">
-        <Image
-          className=" lg:hidden"
-          src={hamburgerMenu}
-          alt="menu"
-          onClick={() => {}}
-        />
+    <header className="flex items-center justify-between  bg-[#101010]  py-[2.2rem]  px-[2.4rem]  sm:justify-start sm:gap-[4.2rem] sm:py-[3.2rem] sm:px-[4rem] lg:justify-between lg:py-[3.5rem]  xl:px-[16.5rem] ">
+      <HamburgerMenu />
 
-        <div className="flex items-center  sm:flex-1 lg:flex-none">
-          <Link href={"/"}>
-            <Image src={logo} alt="logo" />
-          </Link>
-        </div>
+      <div className="flex items-center  sm:flex-1 lg:flex-none">
+        <Link href={"/"}>
+          <Image src={logo} alt="logo" />
+        </Link>
+      </div>
 
-        <div className="hidden lg:block lg:text-white ">
-          <MenuItems />
-        </div>
+      <div className="hidden lg:block lg:text-white ">
+        <MenuItems />
+      </div>
 
-        <div onClick={toggleModal} className="relative">
-          <Image src={cartIcon} alt="cart" />
-          <p className="absolute top-4 left-[-2px] flex h-6 w-6 items-center  justify-center rounded-full bg-white text-black">
-            {getTotalQuantity() || 0}
-          </p>
-        </div>
+      <div onClick={toggleModal} className="relative">
+        <Image src={cartIcon} alt="cart" />
+        <p className="absolute top-4 left-[-2px] flex h-6 w-6 items-center  justify-center rounded-full bg-white text-black">
+          {getTotalQuantity() || 0}
+        </p>
+      </div>
 
-        <Modal isVisible={isVisible} hideModal={toggleModal}>
-          <Cart hideModal={toggleModal} />
-        </Modal>
-      </header>
-    </>
+      <Modal isVisible={isVisible} hideModal={toggleModal}>
+        <Cart hideModal={toggleModal} />
+      </Modal>
+    </header>
   );
 };
 
