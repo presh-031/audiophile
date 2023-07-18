@@ -16,12 +16,12 @@ const HamburgerMenu = () => {
     <div className=" lg:hidden">
       {/* <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} /> */}
 
-      <label for="burger" className={css.burger}>
+      <label htmlFor="burger" className={css.burger}>
         <input
           id="burger"
           type="checkbox"
           checked={menuIsOpen}
-          onClick={handleMenu}
+          onChange={handleMenu}
         />
         <span></span>
         <span></span>

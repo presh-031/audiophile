@@ -12,22 +12,22 @@ const AboutProduct = ({ product, image }) => {
 
   return (
     <div className="mb-[8.80rem]  sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%] lg:mb-[16rem] lg:items-center">
-      <div
-        className={` ${
-          isLoading ? "flex  items-center justify-center" : ""
-        } h-[32.7rem] w-[32.7rem] sm:h-[48rem] sm:min-w-[28.1rem] lg:h-[56rem] lg:min-w-[49%]`}
-      >
-        {isLoading && <Loader />}
-        <Image
-          src={image.slice(1)}
-          alt="product"
-          height={327}
-          width={327}
-          // onLoad={handleImageLoad}
-          onLoadingComplete={handleImageLoad}
-          className="mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-full"
-        />
-      </div>
+      {isLoading && (
+        <div
+          className={`"flex  justify-center" : "" h-[32.7rem]
+           w-[32.7rem] items-center sm:h-[48rem] sm:min-w-[28.1rem] lg:h-[56rem] lg:min-w-[49%]`}
+        >
+          <Loader />
+        </div>
+      )}
+      <Image
+        src={image.slice(1)}
+        alt="product"
+        height={327}
+        width={327}
+        onLoad={handleImageLoad}
+        className="mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-full"
+      />
 
       <div className="pt-[7.8rem] pb-[4.5rem]  lg:p-0">
         {product.new && (
