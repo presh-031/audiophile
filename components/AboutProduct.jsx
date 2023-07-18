@@ -13,9 +13,9 @@ const AboutProduct = ({ product, image }) => {
   return (
     <div className="mb-[8.80rem]  sm:mb-[12rem] sm:flex sm:gap-[1%] min-[700px]:gap-[10%] lg:mb-[16rem] lg:items-center">
       <div
-        className={`${
-          isLoading && "flex items-center justify-center"
-        }sm:min-w-[28.1rem] lg:min-w-[49%]`}
+        className={` ${
+          isLoading ? "flex  items-center justify-center" : ""
+        } h-[32.7rem] w-[32.7rem] sm:h-[48rem] sm:min-w-[28.1rem] lg:h-[56rem] lg:min-w-[49%]`}
       >
         {isLoading && <Loader />}
         <Image
@@ -23,7 +23,8 @@ const AboutProduct = ({ product, image }) => {
           alt="product"
           height={327}
           width={327}
-          onLoad={handleImageLoad}
+          // onLoad={handleImageLoad}
+          onLoadingComplete={handleImageLoad}
           className="mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-full"
         />
       </div>

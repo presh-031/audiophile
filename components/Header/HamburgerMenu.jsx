@@ -12,14 +12,8 @@ const HamburgerMenu = () => {
 
   console.log(menuIsOpen);
   return (
-    <>
-      <Image
-        className=" lg:hidden"
-        src={hamburgerMenu}
-        alt="menu"
-        onClick={handleMenu}
-      />
-
+    <div className=" lg:hidden">
+      <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} />
       <div
         onClick={handleMenu}
         className={`absolute ${
@@ -33,7 +27,7 @@ const HamburgerMenu = () => {
           <AllProducts handleMenu={handleMenu} />
         </nav>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
         // loading={<Loader />}
         persistor={persistor}
       >
-        <div className="relative">
+        <div className="relative mx-auto max-w-[1500px]">
           <Toaster />
           <Header />
           {children}
