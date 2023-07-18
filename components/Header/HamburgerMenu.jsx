@@ -17,7 +17,12 @@ const HamburgerMenu = () => {
       {/* <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} /> */}
 
       <label for="burger" className={css.burger}>
-        <input id="burger" type="checkbox" onClick={handleMenu} />
+        <input
+          id="burger"
+          type="checkbox"
+          checked={menuIsOpen}
+          onClick={handleMenu}
+        />
         <span></span>
         <span></span>
         <span></span>
