@@ -26,7 +26,9 @@ const AboutProduct = ({ product, image }) => {
         height={327}
         width={327}
         onLoad={handleImageLoad}
-        className="mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-full"
+        className={`${
+          isLoading ? "hidden" : "block"
+        } mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-full`}
       />
 
       <div className="pt-[7.8rem] pb-[4.5rem]  lg:p-0">
