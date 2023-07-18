@@ -27,7 +27,7 @@ const AboutProduct = ({ product, image }) => {
         width={327}
         onLoad={handleImageLoad}
         className={`${
-          isLoading ? "hidden" : "block"
+          isLoading ? "h-0 w-0" : ""
         } mx:auto sm:h-[48rem] sm:w-[28.1rem] lg:h-[56rem] lg:w-full`}
       />
 
