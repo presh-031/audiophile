@@ -33,7 +33,6 @@ const HamburgerMenu = () => {
           <AllProducts handleMenu={handleMenu} />
         </nav>
       </div>
-      {/* )} */}
     </>
   );
 };
