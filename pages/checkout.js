@@ -3,8 +3,20 @@ import Summary from "@/components/Summary";
 
 const checkout = () => {
   return (
-    <div className="px-[2.4rem]">
-      <BackBtn />
+    <div className="bg-[#fafafa] px-[2.4rem]">
+      <div className="flex items-center justify-between">
+        <BackBtn />
+        <div className="flex items-center justify-between">
+          <input type="checkbox" id="demo" />
+          <label
+            for="demo"
+            className=" text-[1.2rem] font-medium  text-[#000000] opacity-50"
+          >
+            Use demo details
+          </label>
+        </div>
+      </div>
+
       <div>
         <div className="rounded-[8px] bg-[#FFFFFF] px-[3.2rem] pb-[3.1rem] pt-[2.4rem] ">
           <p className="mb-[2.3rem] text-[2.8rem] font-bold leading-[3.825rem] tracking-[0.1rem]">
