@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import ButtonOne from "../ui/ButtonOne";
 import Loader from "./Loader";
+import Link from "next/link";
 
 const ProductItem = ({ item, reverse = false }) => {
   console.log(item);
@@ -84,8 +84,13 @@ const ProductItem = ({ item, reverse = false }) => {
         </p>
         <p className="text-[1.5rem] font-medium leading-[2.5rem] opacity-50 sm:mb-[2.4rem] lg:mb-[4rem]">
           {item.description}
-        </p>
-        <ButtonOne url={`/${item.category}/${item.slug}`} />
+        </p>{" "}
+        <Link
+          href={`/${item.category}/${item.slug}`}
+          className={`inline bg-[#D87D4A] px-[3.15rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em]  text-white hover:bg-[#FBAF85] sm:w-fit`}
+        >
+          SEE PRODUCT
+        </Link>
       </div>
     </div>
   );

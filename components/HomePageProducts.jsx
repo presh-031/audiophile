@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ButtonTwo from "../ui/ButtonTwo";
 
 const HomePageProducts = () => {
   return (
@@ -32,7 +31,12 @@ const HomePageProducts = () => {
         <p className="mb-[3.2rem] text-[2.80rem] font-bold leading-[3.8rem] tracking-[0.2rem]">
           ZX7 SPEAKER
         </p>
-        <ButtonTwo url="/speakers/zx7-speaker" />
+        <Link
+          href={"/speakers/zx7-speaker"}
+          className={`inline px-[3.15rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] outline outline-[1px] outline-black hover:bg-black hover:text-white hover:outline-none sm:w-fit`}
+        >
+          SEE PRODUCT
+        </Link>
       </div>
 
       <div className="flex flex-col gap-[2.4rem]  sm:h-[32rem] sm:flex-row sm:gap-[1.1rem] lg:gap-[3rem]">
@@ -41,7 +45,12 @@ const HomePageProducts = () => {
           <p className="mb-[3.2rem] text-[3.2rem] font-bold leading-[3.82rem] tracking-[2px]">
             YX1 EARPHONES
           </p>
-          <ButtonTwo url="/earphones/yx1-earphones" />
+          <Link
+            href={"/earphones/yx1-earphones"}
+            className={`inline px-[3.15rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] outline outline-[1px] outline-black hover:bg-black hover:text-white hover:outline-none sm:w-fit`}
+          >
+            SEE PRODUCT
+          </Link>
         </div>
       </div>
     </div>

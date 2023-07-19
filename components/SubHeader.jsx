@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ButtonOne from "../ui/ButtonOne";
 
 const SubHeader = () => {
   return (
@@ -15,7 +14,12 @@ const SubHeader = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>
-        <ButtonOne url={"/headphones/xx99-mark-two-headphones"} />
+        <Link
+          href={"/headphones/xx99-mark-two-headphones"}
+          className=" bg-[#D87D4A] px-[3rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white transition-all duration-300 hover:bg-[#FBAF85]"
+        >
+          SEE PRODUCT
+        </Link>{" "}
       </div>
     </div>
   );
