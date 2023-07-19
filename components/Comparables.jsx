@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import ButtonOne from "../ui/ButtonOne";
+import Link from "next/link";
 
 const Comparables = ({ comparables }) => {
   // Logic to handle window resizing
@@ -56,7 +56,12 @@ const Comparables = ({ comparables }) => {
               <p className="mb-[3.2rem] text-center text-[2.4rem] font-bold leading-[3.278rem] tracking-[.171rem]">
                 {comparable.name}
               </p>
-              <ButtonOne url={`/${comparable.category}/${comparable.slug}`} />
+              <Link
+                href={`/${comparable.category}/${comparable.slug}`}
+                className={`inline px-[3.15rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] outline outline-[1px] outline-black hover:bg-[#4C4C4C] hover:text-white hover:outline-none sm:w-fit`}
+              >
+                SEE PRODUCT
+              </Link>
             </div>
           );
         })}

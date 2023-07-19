@@ -16,7 +16,6 @@ const HomePageProducts = () => {
             truly remarkable sound.
           </p>
           <div className="flex justify-center lg:justify-start">
-            {/* <ButtonTwo url="/speakers/zx9-speaker" /> */}
             <Link
               href={"/speakers/zx9-speaker"}
               className={`inline px-[3.15rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.01em] outline outline-[1px] outline-black hover:bg-[#4C4C4C] hover:text-white hover:outline-none sm:w-fit`}
