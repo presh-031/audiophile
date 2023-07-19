@@ -4,7 +4,7 @@ import arrowRight from "../../assets/shared/desktop/icon-arrow-right.svg";
 
 const ProductCategory = ({ categoryImg, categoryTitle, handleMenu }) => {
   return (
-    <div className=" mt-[6.8rem] flex flex-col items-center rounded-[.8rem] bg-[#f1f1f1] text-center  sm:mt-[5rem] sm:w-full">
+    <div className="group mt-[6.8rem] flex flex-col items-center rounded-[.8rem] bg-[#f1f1f1] text-center  sm:mt-[5rem] sm:w-full">
       <Image
         className="relative top-[-5.2rem] mb-[-5.2rem] lg:h-[16rem] lg:w-[12.295rem] lg:object-cover"
         src={categoryImg}
@@ -18,7 +18,7 @@ const ProductCategory = ({ categoryImg, categoryTitle, handleMenu }) => {
       <Link
         href={`/${categoryTitle.toLowerCase()}`}
         onClick={handleMenu}
-        className="mt-[1.7rem] mb-[2.2rem] flex justify-center gap-[1.3rem] lg:mt-[1.5rem] lg:mb-[3rem] "
+        className="mt-[1.7rem] mb-[2.2rem] flex justify-center gap-[1.3rem] group-hover:text-[#D87D4A] lg:mt-[1.5rem] lg:mb-[3rem] "
       >
         <p className="text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] opacity-50">
           SHOP

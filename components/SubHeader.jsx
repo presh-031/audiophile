@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ButtonOne from "../ui/ButtonOne";
 
 const SubHeader = () => {

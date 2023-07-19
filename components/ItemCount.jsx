@@ -54,14 +54,14 @@ const ItemCount = ({ item }) => {
       <div className="flex items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem]  tracking-[.1rem] ">
         <button
           onClick={handleDecrementBtnClick}
-          className="px-[1.5rem] py-[1rem] "
+          className="px-[1.5rem] py-[1rem] hover:text-[#D87D4A]"
         >
           -
         </button>
         <p className="px-[0.5rem] ">{cartItem ? cartItem.quantity : 0}</p>
         <button
           onClick={handleIncrementBtnClick}
-          className="px-[1.5rem] py-[1rem] "
+          className="px-[1.5rem] py-[1rem] hover:text-[#D87D4A]"
         >
           +
         </button>
@@ -69,7 +69,7 @@ const ItemCount = ({ item }) => {
       <div>
         <button
           onClick={handleIncrementBtnClick}
-          className="bg-[#D87D4A] px-[3.5rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white"
+          className="bg-[#D87D4A] px-[3.5rem] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white hover:bg-[#FBAF85]"
         >
           ADD TO CART
         </button>
