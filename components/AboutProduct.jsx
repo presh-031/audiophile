@@ -4,6 +4,7 @@ import { useState } from "react";
 import Loader from "./Loader";
 
 const AboutProduct = ({ product, image }) => {
+  // Logic for image loader
   const [isLoading, setIsLoading] = useState(true);
 
   const handleImageLoad = () => {

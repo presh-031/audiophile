@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import Image from "next/image";
 import ButtonOne from "./ButtonOne";
+import Loader from "./Loader";
 
 const ProductItem = ({ item, reverse = false }) => {
   console.log(item);
@@ -37,12 +38,23 @@ const ProductItem = ({ item, reverse = false }) => {
     image = item.image.desktop;
   }
 
+  // Logic for image loader
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
   return (
     <div
       className={`${reverse ? "lg:flex-row-reverse" : ""} lg:flex lg:h-[56rem]`}
     >
       {/* check tablet images */}
-      <div className="mb-[3.2rem] bg-[#f1f1f1]  sm:mb-[5.2rem] lg:m-0 lg:flex lg:w-1/2 lg:items-center">
+      <div className="mb-[3.2rem] flex bg-[#f1f1f1]  sm:mb-[5.2rem] lg:m-0 lg:flex lg:w-1/2 lg:items-center">
+        {isLoading && (
+          <div className=" mx-auto flex h-[35.2rem] w-full items-center justify-center border border-red-800 sm:mb-[5.2rem] md:h-[56.2rem] lg:h-[35.2rem]  ">
+            <Loader />
+          </div>
+        )}
         <Image
           // .slice(1) to remove the initial '.' in the filepath string the json returns
           // so that the filepath referenced starts with a '/', as the assets are in the public folder.
@@ -50,7 +62,10 @@ const ProductItem = ({ item, reverse = false }) => {
           alt="product"
           height={352}
           width={327}
-          className="sm:bg-[ #F1F1F1] mx-auto sm:mb-[5.2rem]  lg:object-cover"
+          onLoad={handleImageLoad}
+          className={`
+          ${isLoading ? "h-0 w-0" : ""}
+           mx-auto border border-red-800 sm:mb-[5.2rem]  lg:object-cover`}
         />
       </div>
 
