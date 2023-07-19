@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import ButtonOne from "./ButtonOne";
+import ButtonOne from "../ui/ButtonOne/ButtonOne";
 import Loader from "./Loader";
 
 const ProductItem = ({ item, reverse = false }) => {

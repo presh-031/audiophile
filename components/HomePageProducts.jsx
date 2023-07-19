@@ -1,4 +1,4 @@
-import ButtonTwo from "./ButtonTwo";
+import ButtonTwo from "../ui/ButtonTwo";
 
 const HomePageProducts = () => {
   return (
