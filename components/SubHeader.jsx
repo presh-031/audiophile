@@ -1,4 +1,4 @@
-import ButtonOne from "../ui/ButtonOne/ButtonOne";
+import ButtonOne from "../ui/ButtonOne";
 
 const SubHeader = () => {
   return (

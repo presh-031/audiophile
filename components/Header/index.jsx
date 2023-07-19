@@ -3,14 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../assets/shared/desktop/logo.svg";
-import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
 import Cart from "./Cart";
 import MenuItems from "./MenuItems";
 
 import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import useModal from "@/hooks/useModal";
 import Modal from "@/ui/Modal";
-
 import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
@@ -53,9 +51,9 @@ const Header = () => {
         <MenuItems />
       </div>
 
-      <div onClick={toggleModal} className="relative">
+      <div onClick={toggleModal} className="group relative cursor-pointer  ">
         <Image src={cartIcon} alt="cart" />
-        <p className="absolute top-4 left-[-2px] flex h-6 w-6 items-center  justify-center rounded-full bg-white text-black">
+        <p className="absolute top-4 left-[-2px] flex h-6  w-6 items-center justify-center rounded-full bg-white  text-black transition-all duration-200 group-hover:scale-150">
           {getTotalQuantity() || 0}
         </p>
       </div>

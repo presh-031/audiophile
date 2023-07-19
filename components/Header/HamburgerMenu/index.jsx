@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import hamburgerMenu from "../../assets/shared/tablet/icon-hamburger.svg";
-import AllProducts from "../AllProducts";
+import AllProducts from "../../AllProducts";
 
 import css from "./HamburgerMenu.module.css";
 const HamburgerMenu = () => {
@@ -32,7 +31,7 @@ const HamburgerMenu = () => {
         onClick={handleMenu}
         className={`absolute ${
           menuIsOpen ? "right-0 " : "right-full"
-        } bottom-0  top-[7rem] z-[1000] w-full  bg-black  bg-opacity-40  transition-all duration-200`}
+        } bottom-0  top-[7rem] z-[1000] w-full  bg-black  bg-opacity-40  transition-all duration-300`}
       >
         <nav
           onClick={(e) => e.stopPropagation()}

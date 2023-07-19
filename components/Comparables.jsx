@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import ButtonOne from "../ui/ButtonOne/ButtonOne";
+import ButtonOne from "../ui/ButtonOne";
 
 const Comparables = ({ comparables }) => {
   // Logic to handle window resizing
