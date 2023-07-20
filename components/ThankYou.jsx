@@ -1,14 +1,17 @@
 import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 import Item from "./Summary/Item";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { emptyCart } from "@/features/cart/cartSlice";
 
 const ThankYou = ({ hideModal, grandTotal }) => {
   const cart = useSelector((state) => state.cart);
 
   const router = useRouter();
+
+  const dispatch = useDispatch();
   return (
     <div
       onClick={hideModal}
@@ -74,6 +77,7 @@ const ThankYou = ({ hideModal, grandTotal }) => {
             role="button"
             onClick={() => {
               hideModal();
+              dispatch(emptyCart());
               router.push("/");
             }}
             className="mt-[2.3rem] w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline hover:bg-[#FBAF85]"
