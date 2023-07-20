@@ -4,6 +4,7 @@ import Modal from "@/ui/Modal";
 import ThankYou from "../ThankYou";
 import Cart from "../Header/Cart";
 import useModal from "@/hooks/useModal";
+import { cartIsEmpty } from "@/helpers/toasts";
 
 const Summary = () => {
   const cart = useSelector((state) => state.cart);
@@ -74,14 +75,16 @@ const Summary = () => {
 
       <button
         role="button"
+        onClick={() => {
+          cart.length ? toggleModal() : cartIsEmpty();
+        }}
         className="mt-[3.2rem] w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline hover:bg-[#FBAF85]"
       >
         CONTINUE & PAY
       </button>
 
       <Modal isVisible={isVisible} hideModal={toggleModal}>
-        {/* <ThankYou hideModal={toggleModal} /> */}
-        <Cart hideModal={toggleModal} />
+        <ThankYou hideModal={toggleModal} grandTotal={grandTotal} />
       </Modal>
     </div>
   );

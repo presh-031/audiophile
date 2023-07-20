@@ -12,7 +12,7 @@ const checkout = () => {
         <div className="flex items-center justify-between">
           <input type="checkbox" id="demo" />
           <label
-            for="demo"
+            htmlFor="demo"
             className=" text-[1.2rem] font-medium  text-[#000000] opacity-50"
           >
             Use demo details
