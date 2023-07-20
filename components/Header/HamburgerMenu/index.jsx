@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React, { useState } from "react";
 import AllProducts from "../../AllProducts";
 
@@ -10,7 +9,6 @@ const HamburgerMenu = () => {
     setMenuIsOpen((prevMenuIsOpen) => !prevMenuIsOpen);
   };
 
-  console.log(menuIsOpen);
   return (
     <div className=" lg:hidden">
       {/* <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} /> */}

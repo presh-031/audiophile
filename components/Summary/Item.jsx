@@ -1,13 +1,7 @@
-import {
-  decrementQuantity,
-  incrementQuantity,
-} from "../../features/cart/cartSlice";
-
 import Image from "next/image";
 import { useDispatch } from "react-redux";
 
 const Item = ({ id, image, name, price, quantity }) => {
-  // console.log(id, image, name, price, quantity);
   const dispatch = useDispatch();
 
   return (

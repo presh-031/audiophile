@@ -9,8 +9,6 @@ import { cartIsEmpty } from "@/helpers/toasts";
 const Summary = () => {
   const cart = useSelector((state) => state.cart);
 
-  console.log(cart);
-
   const getTotal = () => {
     let totalQuantity = 0;
     let totalPrice = 0;

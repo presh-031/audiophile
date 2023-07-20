@@ -22,7 +22,6 @@ const ItemCount = ({ item }) => {
   // To get specific cart item in ui
   const cartItem = cart.find((cartItem) => cartItem.id === item.id);
 
-  console.log(cartItem);
   const handleDecrementBtnClick = () => {
     // should remove item if item in cart is just 1.
 

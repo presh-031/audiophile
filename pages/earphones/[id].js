@@ -41,7 +41,6 @@ const ProductDetail = ({ earphone }) => {
 
   const gallery = product.gallery;
 
-  console.log(product);
   return (
     <>
       <ProductPage>

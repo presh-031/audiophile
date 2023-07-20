@@ -1,5 +1,4 @@
 import AllProducts from "@/components/AllProducts";
-import NavMenu from "@/components/Header/HamburgerMenu";
 import HomePageProducts from "@/components/HomePageProducts";
 import SubHeader from "@/components/SubHeader";
 import Head from "next/head";

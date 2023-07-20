@@ -1,8 +1,5 @@
 import BackBtn from "@/components/BackBtn";
 import Summary from "@/components/Summary";
-import ThankYou from "@/components/ThankYou";
-import useModal from "@/hooks/useModal";
-import Modal from "@/ui/Modal";
 
 const checkout = () => {
   return (

@@ -5,10 +5,6 @@ import Loader from "./Loader";
 import Link from "next/link";
 
 const ProductItem = ({ item, reverse = false }) => {
-  console.log(item);
-  console.log(item.image.tablet);
-
-  console.log(reverse);
   // Logic to handle window resizing
   const [windowSize, setWindowSize] = useState(getWindowSize());
 
