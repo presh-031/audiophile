@@ -62,7 +62,7 @@ const Cart = ({ hideModal }) => {
                 dispatch(emptyCart());
                 hideModal();
               }}
-              className="text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50 hover:underline"
+              className="cursor-pointer text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50 hover:text-[#D87D4A] hover:underline"
             >
               Remove all
             </p>
@@ -91,7 +91,7 @@ const Cart = ({ hideModal }) => {
           <button
             role="button"
             onClick={handleCheckoutBtnClick}
-            className="w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline"
+            className="w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline hover:bg-[#FBAF85]"
           >
             CHECKOUT
           </button>

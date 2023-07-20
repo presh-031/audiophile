@@ -21,14 +21,14 @@ const CartItem = ({ id, image, name, price, quantity }) => {
       <div className="flex h-[3.2rem] items-center bg-[#f1f1f1] py-[0.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[1px]  sm:ml-[4rem] ">
         <div
           onClick={() => dispatch(decrementQuantity(id))}
-          className="px-[1.5rem] py-[1rem] "
+          className="cursor-pointer px-[1.5rem] py-[1rem] hover:text-[#D87D4A] "
         >
           -
         </div>
         <p className="px-[0.5rem]">{quantity}</p>
         <div
           onClick={() => dispatch(incrementQuantity(id))}
-          className="px-[1.5rem] py-[1rem] "
+          className="cursor-pointer px-[1.5rem] py-[1rem] hover:text-[#D87D4A] "
         >
           +
         </div>

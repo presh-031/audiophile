@@ -24,8 +24,8 @@ const Summary = () => {
   const grandTotal = getTotal().totalPrice + shipping;
 
   return (
-    <div className="mt-[3.2rem] rounded-[8px] bg-[#FFFFFF] px-[3.2rem] pb-[3.1rem] pt-[2.4rem] ">
-      <p className="text-[1.8rem] font-bold text-black ">SUMMARY</p>
+    <div className="mt-[3.2rem] rounded-[8px] bg-[#FFFFFF] px-[3.2rem] pb-[3.1rem] pt-[2.4rem]">
+      <p className="mb-[3.1rem] text-[1.8rem] font-bold text-black">SUMMARY</p>
 
       {cart?.map((item) => (
         <Item
@@ -38,24 +38,39 @@ const Summary = () => {
         />
       ))}
 
-      <div className="mt-[3.2rem]">
-        <span>TOTAL</span>
-        <span>${getTotal().totalPrice}</span>
+      <div className="mt-[3.2rem] flex items-center justify-between text-black">
+        <span className="text-[1.5rem] font-medium leading-[2.5rem]  opacity-50">
+          TOTAL
+        </span>
+        <span className="text-[1.8rem] font-bold  ">
+          ${getTotal().totalPrice}
+        </span>
       </div>
-      <div>
-        <span>SHIPPING</span>
-        <span>${shipping}</span>
+      <div className="mt-[.8rem] flex items-center justify-between">
+        <span className="text-[1.5rem] font-medium leading-[2.5rem]  opacity-50">
+          SHIPPING
+        </span>
+        <span className="text-[1.8rem] font-bold  ">${shipping}</span>
       </div>
-      <div>
-        <span>VAT (INCLUDED)</span>
-        <span>${VAT}</span>
+      <div className="mt-[.8rem] flex items-center justify-between">
+        <span className="text-[1.5rem] font-medium leading-[2.5rem]  opacity-50">
+          VAT (INCLUDED)
+        </span>
+        <span className="text-[1.8rem] font-bold  ">${VAT}</span>
       </div>
-      <div>
-        <span>GRAND TOTAL</span>
-        <span>${grandTotal}</span>
+      <div className="mt-[2.4rem] flex items-center justify-between">
+        <span className="text-[1.5rem] font-medium leading-[2.5rem]  opacity-50">
+          GRAND TOTAL
+        </span>
+        <span className="text-[1.8rem] font-bold  ">${grandTotal}</span>
       </div>
 
-      <button role="button">CONTINUE & PAY</button>
+      <button
+        role="button"
+        className="mt-[3.2rem] w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline hover:bg-[#FBAF85]"
+      >
+        CONTINUE & PAY
+      </button>
     </div>
   );
 };
