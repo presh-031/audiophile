@@ -21,8 +21,8 @@ const Summary = () => {
   };
 
   // demo shipping and vat values
-  const shipping = 50;
-  const VAT = 1079;
+  const shipping = getTotal().totalPrice ? 50 : 0;
+  const VAT = getTotal().totalPrice ? 1079 : 0;
 
   // grand total (includes shipping)
   const grandTotal = getTotal().totalPrice + shipping;
