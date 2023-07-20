@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import Item from "./Item";
+import Modal from "@/ui/Modal";
+import ThankYou from "../ThankYou";
+import Cart from "../Header/Cart";
+import useModal from "@/hooks/useModal";
 
 const Summary = () => {
   const cart = useSelector((state) => state.cart);
@@ -22,6 +26,9 @@ const Summary = () => {
 
   // grand total (includes shipping)
   const grandTotal = getTotal().totalPrice + shipping;
+
+  // Modal logic
+  const { isVisible, toggleModal } = useModal();
 
   return (
     <div className="mt-[3.2rem] rounded-[8px] bg-[#FFFFFF] px-[3.2rem] pb-[3.1rem] pt-[2.4rem]">
@@ -71,6 +78,11 @@ const Summary = () => {
       >
         CONTINUE & PAY
       </button>
+
+      <Modal isVisible={isVisible} hideModal={toggleModal}>
+        {/* <ThankYou hideModal={toggleModal} /> */}
+        <Cart hideModal={toggleModal} />
+      </Modal>
     </div>
   );
 };
