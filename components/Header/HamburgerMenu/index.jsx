@@ -2,17 +2,13 @@ import React, { useState } from "react";
 import AllProducts from "../../AllProducts";
 
 import css from "./HamburgerMenu.module.css";
-const HamburgerMenu = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-
+const HamburgerMenu = ({ menuIsOpen, setMenuIsOpen }) => {
   const handleMenu = () => {
     setMenuIsOpen((prevMenuIsOpen) => !prevMenuIsOpen);
   };
 
   return (
     <div className=" lg:hidden">
-      {/* <Image src={hamburgerMenu} alt="menu" onClick={handleMenu} /> */}
-
       <label htmlFor="burger" className={css.burger}>
         <input
           id="burger"

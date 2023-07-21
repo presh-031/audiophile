@@ -10,6 +10,7 @@ import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import useModal from "@/hooks/useModal";
 import Modal from "@/ui/Modal";
 import HamburgerMenu from "./HamburgerMenu";
+import { useState } from "react";
 
 const Header = () => {
   const cart = useSelector((state) => state.cart);
@@ -37,11 +38,19 @@ const Header = () => {
   // Modal logic
   const { isVisible, toggleModal } = useModal();
 
+  //  Logic for HamburgerMenu
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
+
   return (
     <header className="flex items-center justify-between  bg-[#101010]  py-[2.2rem]  px-[2.4rem]  sm:justify-start sm:gap-[4.2rem] sm:py-[3.2rem] sm:px-[4rem] lg:justify-between lg:py-[3.5rem]  xl:px-[16.5rem] ">
-      <HamburgerMenu />
+      <HamburgerMenu menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen} />
 
-      <div className="flex items-center  sm:flex-1 lg:flex-none">
+      <div
+        onClick={() => {
+          setMenuIsOpen(false);
+        }}
+        className="flex items-center  sm:flex-1 lg:flex-none"
+      >
         <Link href={"/"}>
           <Image src={logo} alt="logo" />
         </Link>
@@ -51,7 +60,13 @@ const Header = () => {
         <MenuItems />
       </div>
 
-      <div onClick={toggleModal} className="group relative cursor-pointer  ">
+      <div
+        onClick={() => {
+          toggleModal();
+          setMenuIsOpen(false);
+        }}
+        className="group relative cursor-pointer  "
+      >
         <Image src={cartIcon} alt="cart" />
         <p className="absolute top-4 left-[-2px] flex h-6  w-6 items-center justify-center rounded-full bg-white  text-black transition-all duration-200 group-hover:scale-150">
           {getTotalQuantity() || 0}
