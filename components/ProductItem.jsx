@@ -47,7 +47,7 @@ const ProductItem = ({ item, reverse = false }) => {
       {/* check tablet images */}
       <div className="mb-[3.2rem] flex bg-[#f1f1f1]  sm:mb-[5.2rem] lg:m-0 lg:flex lg:w-1/2 lg:items-center">
         {isLoading && (
-          <div className=" mx-auto flex h-[35.2rem] w-full items-center justify-center border border-red-800 sm:mb-[5.2rem] md:h-[56.2rem] lg:h-[35.2rem]  ">
+          <div className=" mx-auto flex h-[35.2rem] w-full items-center justify-center  sm:mb-[5.2rem] md:h-[56.2rem] lg:h-[35.2rem]  ">
             <Loader />
           </div>
         )}
