@@ -46,12 +46,12 @@ const Cart = ({ hideModal }) => {
       onClick={hideModal}
       className="overlay fixed left-0 top-0 z-[500] h-screen w-full bg-black bg-opacity-50"
     >
-      <div className="wrapper  fixed left-0 top-[114px] z-[1000] flex w-full justify-center overflow-y-auto overflow-x-hidden">
+      <div className="wrapper fixed left-0 top-[114px] bottom-[114px] z-[1000] flex max-h-screen w-full justify-center overflow-y-auto overflow-x-hidden">
         <div
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className=" modal min-[600px]:left-[11rem] min-[660px]:left-[13rem] min-[700px]:left-[15rem] min-[750px]:left-[18rem] min-[800px]:left-[20rem] min-[840px]:left-[22rem] min-[880px]:left-[24rem] min-[920px]:left-[26rem] min-[950px]:left-[28rem] min-[1000px]:left-[30rem] min-[650px]:left-[11rem]   relative z-[1000]  rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] sm:left-[12rem] lg:left-[32rem]"
+          className=" modal relative z-[1000] h-fit rounded-[0.8rem] bg-white px-[2.8rem] py-[3.2rem] min-[600px]:left-[11rem] sm:left-[12rem] min-[650px]:left-[11rem] min-[660px]:left-[13rem] min-[700px]:left-[15rem]   min-[750px]:left-[18rem] min-[800px]:left-[20rem]  min-[840px]:left-[22rem] min-[880px]:left-[24rem] min-[920px]:left-[26rem] min-[950px]:left-[28rem] min-[1000px]:left-[30rem] lg:left-[32rem]"
         >
           <div className="mb-[3.1rem] flex justify-between">
             <p className="text-[1.8rem] font-bold leading-[2.4590rem] tracking-[.129rem]">
