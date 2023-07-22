@@ -389,7 +389,7 @@ export const products = [
       },
       {
         slug: "zx9-speaker",
-        category: "speaker",
+        category: "speakers",
         name: "ZX9 Speaker",
         image: {
           mobile: "./assets/shared/mobile/image-zx9-speaker.jpg",
@@ -465,7 +465,7 @@ export const products = [
     others: [
       {
         slug: "zx9-speaker",
-        category: "speaker",
+        category: "speakers",
         name: "ZX9 Speaker",
         image: {
           mobile: "./assets/shared/mobile/image-zx9-speaker.jpg",
@@ -561,7 +561,7 @@ export const products = [
     others: [
       {
         slug: "zx7-speaker",
-        category: "speaker",
+        category: "speakers",
         name: "ZX7 Speaker",
         image: {
           mobile: "./assets/shared/mobile/image-zx7-speaker.jpg",
