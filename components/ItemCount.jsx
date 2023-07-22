@@ -23,14 +23,14 @@ const ItemCount = ({ item }) => {
   const cartItem = cart.find((cartItem) => cartItem.id === item.id);
 
   const handleDecrementBtnClick = () => {
-    // should remove item if item in cart is just 1.
-
     if (cartItem?.quantity > 1) {
       dispatch(decrementQuantity(item.id));
       removedOneItemToast();
-    } else {
+    } else if (cartItem?.quantity == 1) {
       dispatch(removeItem(item.id));
       removedItemToast();
+    } else {
+      return;
     }
   };
 
