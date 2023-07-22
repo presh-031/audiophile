@@ -61,7 +61,7 @@ const ProductItem = ({ item, reverse = false }) => {
           onLoad={handleImageLoad}
           className={`
           ${isLoading ? "h-0 w-0" : ""}
-           mx-auto border border-red-800 sm:mb-[5.2rem]  lg:object-cover`}
+           mx-auto sm:mb-[5.2rem]  lg:object-cover`}
         />
       </div>
 
