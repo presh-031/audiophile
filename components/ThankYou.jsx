@@ -1,6 +1,5 @@
 import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
-import Item from "./Summary/Item";
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -17,12 +16,12 @@ const ThankYou = ({ hideModal, grandTotal }) => {
       onClick={hideModal}
       className="overlay fixed left-0 top-0 z-[500] h-screen w-full bg-black bg-opacity-50"
     >
-      <div className="wrapper  fixed left-0 top-[114px] z-[1000] flex w-full justify-center overflow-y-auto overflow-x-hidden">
+      <div className="wrapper  fixed left-0 top-[114px] bottom-[114px] z-[1000] flex max-h-screen w-full justify-center overflow-y-auto overflow-x-hidden">
         <div
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className=" modal relative z-[1000] mx-[2.4rem] rounded-[0.8rem] bg-white p-[3.2rem] "
+          className=" modal relative z-[1000] mx-[2.4rem] h-fit rounded-[0.8rem] bg-white p-[3.2rem] "
         >
           <BsCheckCircleFill className="mb-[2.3rem] h-[6.4rem] w-[6.4rem] text-[#D87D4A]" />
           <p className="mb-[1.6rem] text-[2.4rem] font-bold leading-[2.8rem] tracking-[0.0086rem] text-black ">
