@@ -16,7 +16,7 @@ const ThankYou = ({ hideModal, grandTotal }) => {
       onClick={hideModal}
       className="overlay fixed left-0 top-0 z-[500] h-screen w-full bg-black bg-opacity-50"
     >
-      <div className="wrapper  fixed left-0 top-[114px] bottom-[114px] z-[1000] flex max-h-screen w-full justify-center overflow-y-auto overflow-x-hidden">
+      <div className="wrapper fixed left-0 top-[14%] bottom-[10%] z-[1000] flex max-h-screen w-full justify-center overflow-y-auto overflow-x-hidden">
         <div
           onClick={(e) => {
             e.stopPropagation();
