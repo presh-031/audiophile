@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { emptyCart } from "@/features/cart/cartSlice";
-import CartItem from "./CartItem";
+import { CartItem } from "../../../index";
 import { useRouter } from "next/router";
 import { cartIsEmpty } from "@/helpers/toasts";
 

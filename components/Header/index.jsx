@@ -1,15 +1,14 @@
 import { useDispatch, useSelector } from "react-redux";
 
+import { Cart, MenuItems, HamburgerMenu } from "../../index";
+
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../assets/shared/desktop/logo.svg";
-import Cart from "./Cart";
-import MenuItems from "./MenuItems";
 
 import cartIcon from "../../assets/shared/desktop/icon-cart.svg";
 import useModal from "@/hooks/useModal";
 import Modal from "@/ui/Modal";
-import HamburgerMenu from "./HamburgerMenu";
 import { useState } from "react";
 
 const Header = () => {

@@ -21,19 +21,20 @@ const ThankYou = ({ hideModal, grandTotal }) => {
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className=" modal relative z-[1000] mx-[2.4rem] h-fit rounded-[0.8rem] bg-white p-[3.2rem] "
+          className="modal relative z-[1000] mx-[2.4rem] h-fit rounded-[0.8rem] bg-white p-[3.2rem] sm:mx-[11.4rem] min-[700px]:p-[4.8rem]"
         >
-          <BsCheckCircleFill className="mb-[2.3rem] h-[6.4rem] w-[6.4rem] text-[#D87D4A]" />
-          <p className="mb-[1.6rem] text-[2.4rem] font-bold leading-[2.8rem] tracking-[0.0086rem] text-black ">
-            THANK YOU FOR YOUR ORDER
+          <BsCheckCircleFill className="mb-[2.3rem] h-[6.4rem] w-[6.4rem] text-[#D87D4A] sm:mb-[3.3rem]" />
+          <p className="mb-[1.6rem] text-[2.4rem] font-bold leading-[2.8rem] tracking-[0.086rem] text-black sm:mb-[2.4rem]  sm:text-[3.2rem] sm:leading-[3.6rem] sm:tracking-[.14rem] ">
+            <span className="sm:block">THANK YOU</span> FOR YOUR ORDER
           </p>
-          <p className="mb-[2.4rem] text-[1.5rem] font-medium leading-[2.5rem] text-black opacity-50">
+          <p className="mb-[2.4rem] text-[1.5rem]  font-medium leading-[2.5rem] text-black opacity-50 sm:mb-[3.3rem]">
             You will receive an email confirmation shortly.
           </p>
-          <div className="overflow-hidden rounded-[.8rem]">
+
+          <div className="overflow-hidden rounded-[.8rem]  sm:flex">
             {cart.length && (
               <div className="bg-[#F1F1F1] p-[2.4rem]">
-                <div className="mb-[2.4rem] flex items-start gap-[1.6rem]">
+                <div className="mb-[2.4rem] flex items-start gap-[1.6rem]  sm:mb-[1.2rem]">
                   <div>
                     <Image
                       src={cart[0]?.image.mobile.slice(1)}
@@ -43,7 +44,7 @@ const ThankYou = ({ hideModal, grandTotal }) => {
                     />
                   </div>
 
-                  <div className=" flex flex-1 flex-col font-bold leading-[2.5rem]">
+                  <div className=" flex flex-1 flex-col  font-bold leading-[2.5rem]">
                     <p className="w-[7.5rem] truncate text-[1.5rem] font-bold leading-[2.5rem]">
                       {cart[0]?.name}
                     </p>
@@ -52,7 +53,7 @@ const ThankYou = ({ hideModal, grandTotal }) => {
                     </p>
                   </div>
 
-                  <p className=" text-[1.5rem] font-bold leading-[2.5rem]  text-black  opacity-50 ">
+                  <p className="  text-[1.5rem] font-bold leading-[2.5rem]  text-black  opacity-50 ">
                     x{cart[0]?.quantity}
                   </p>
                 </div>
@@ -63,11 +64,12 @@ const ThankYou = ({ hideModal, grandTotal }) => {
               </div>
             )}
 
-            <div className="bg-black px-[2.4rem] py-[1.5rem]">
+            {/* here */}
+            <div className="bg-black px-[2.4rem] py-[1.5rem] sm:flex sm:flex-col sm:justify-center sm:py-0">
               <p className="mb-[.8rem] text-[1.5rem] font-medium leading-[2.5rem]  text-white opacity-50">
                 GRAND TOTAL
               </p>
-              <p className="text-[1.8rem] font-bold text-white ">
+              <p className="text-[1.8rem] font-bold leading-normal text-white ">
                 $ {grandTotal}
               </p>
             </div>
@@ -79,7 +81,7 @@ const ThankYou = ({ hideModal, grandTotal }) => {
               dispatch(emptyCart());
               router.push("/");
             }}
-            className="mt-[2.3rem] w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white outline hover:bg-[#FBAF85]"
+            className="mt-[2.3rem] w-full bg-[#D87D4A] py-[1.5rem] text-[1.3rem] font-bold leading-[1.776rem] tracking-[0.1rem] text-white  hover:bg-[#FBAF85] sm:mt-[4.6rem]"
           >
             BACK TO HOME
           </button>

@@ -1,7 +1,7 @@
 import earPhones from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import headPhones from "../../assets/shared/desktop/image-category-thumbnail-headphones.png";
 import speakers from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
-import ProductCategory from "./ProductCategory";
+import { ProductCategory } from "../../index";
 
 const AllProducts = ({ handleMenu }) => {
   return (

@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import Item from "./Item";
 import Modal from "@/ui/Modal";
-import ThankYou from "../ThankYou";
-import Cart from "../Header/Cart";
 import useModal from "@/hooks/useModal";
+
+import { Cart, CartItem, Item, ThankYou } from "../../../index";
+
 import { cartIsEmpty } from "@/helpers/toasts";
 
 const Summary = () => {
