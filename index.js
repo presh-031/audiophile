@@ -7,4 +7,4 @@ export { default as AllProducts } from "./components/AllProducts/index";
 export { default as Item } from "./components/Summary/Item";
 export { default as ThankYou } from "./components/ThankYou";
 
-// Going top down, now at about
+// Going top down, now at About.jsx

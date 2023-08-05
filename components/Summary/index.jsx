@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Modal from "@/ui/Modal";
 import useModal from "@/hooks/useModal";
 
-import { Cart, CartItem, Item, ThankYou } from "../../../index";
+import { Cart, CartItem, Item, ThankYou } from "../../index";
 
 import { cartIsEmpty } from "@/helpers/toasts";
 

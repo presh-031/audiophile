@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AllProducts } from "../../index";
+import { AllProducts } from "../../../index";
 
 import css from "./HamburgerMenu.module.css";
 const HamburgerMenu = ({ menuIsOpen, setMenuIsOpen }) => {
