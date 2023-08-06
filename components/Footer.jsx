@@ -3,7 +3,7 @@ import facebook from "../assets/shared/desktop/icon-facebook.svg";
 import instagram from "../assets/shared/desktop/icon-instagram.svg";
 import twitter from "../assets/shared/desktop/icon-twitter.svg";
 import logo from "../assets/shared/desktop/logo.svg";
-import MenuItems from "./Header/MenuItems";
+import { MenuItems } from "../index";
 
 const Footer = () => {
   return (

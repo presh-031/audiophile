@@ -1,7 +1,6 @@
 import Image from "next/image";
-import ItemCount from "./ItemCount";
+import { Loader, ItemCount } from "../index";
 import { useState } from "react";
-import Loader from "./Loader";
 
 const AboutProduct = ({ product, image }) => {
   // Logic for image loader

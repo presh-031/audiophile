@@ -10,7 +10,7 @@ const SubHeader = () => {
         <p className="mb-[2.4rem] mt-[1.6rem]  text-[3.6rem] font-bold leading-[4rem] tracking-[.129rem] sm:mt-[2.4rem] sm:text-[5.6rem] sm:leading-[5.8rem] sm:tracking-[.2rem]">
           XX99 MARK II HEADPHONES
         </p>
-        <p className=" mb-[2.8rem] text-[1.5rem] font-medium leading-[2.5rem]  sm:m-auto sm:mb-[4rem] sm:w-[90%] lg:w-full ">
+        <p className=" mb-[2.8rem] text-[1.5rem] font-medium leading-[2.5rem]  opacity-75 sm:m-auto sm:mb-[4rem] sm:w-[90%] lg:w-full">
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </p>

@@ -4,13 +4,12 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
-import About from "./About";
-import Footer from "./Footer";
-import Header from "./Header";
+import { Header, About, Footer } from "../index";
+
 import { useRouter } from "next/router";
 
-// import { Manrope } from "@next/font/google";
-// const manrope = Manrope({ subsets: ["latin"] });
+import { Manrope } from "@next/font/google";
+const manrope = Manrope({ subsets: ["latin"] });
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -22,7 +21,7 @@ const Layout = ({ children }) => {
         // loading={<Loader />}
         persistor={persistor}
       >
-        <div className="relative mx-auto max-w-[1500px]">
+        <div className={`${manrope.className} relative mx-auto max-w-[1500px]`}>
           <Toaster />
           <Header />
           {children}

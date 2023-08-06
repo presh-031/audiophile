@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import Image from "next/image";
-import Loader from "./Loader";
+import { Loader } from "../index";
 import Link from "next/link";
 
 const ProductItem = ({ item, reverse = false }) => {
